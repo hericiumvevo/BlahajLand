@@ -1,0 +1,98 @@
+@import "base.css";
+
+#portal {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#catchphrase {
+    padding: 0 100px;
+    background: url("../im/placeholder.jpg") center;
+    background-size: cover;
+    border-radius: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+#catchphrase > * {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#buttons > a {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF80;
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    transition: scale 0.25s, opacity 0.25s;
+}
+
+#buttons > a:hover {
+    scale: 1.1;
+    opacity: 75%;
+}
+
+#buttons > a > p, #bps > div > h1 > p {
+    font-size: 80px;
+    margin: 10px;
+}
+
+#buttons > a:first-of-type {
+    margin-bottom: 20px;
+}
+
+#bp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bps {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#bps > * {
+    flex-basis: 28%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2%;
+    margin-bottom: 20px;
+}
+
+#bps > div > p {
+    font-size: 1.2em;
+}
+
+#bps > div > h1 {
+    text-align: center;
+}
