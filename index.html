@@ -7,72 +7,81 @@
     <meta property="og:title" content="blahaj.land">
     <meta property="og:description" content="A small, free hosting service ran by a kitty">
     <meta charset="UTF-8">
-        <title>blahaj.land</title>
-        <link rel="stylesheet/less" type="text/css" href="css/landing.less" />
-        <script src="https://cdn.jsdelivr.net/npm/less" ></script>
-    </head>
-    <body>
-    <div id="navbar">
-        <script>$("#navbar").load("parts/navbar.html")</script>
+    <title>blahaj.land</title>
+    <link rel="stylesheet/less" type="text/css" href="css/landing.less"/>
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+<body>
+<div id="navbar">
+    <script>$("#navbar").load("parts/navbar.html")</script>
+</div>
+<div id="portal">
+    <div id="catchphrase">
+        <h1>Welcome back uwu 👋</h1>
+        <p>
+            Welcome to <code>blahaj.land</code>, the ultimate destination for secure and seamless online storage !
+            Embrace the convenience of unlimited storage space and bid farewell to worries of data loss. Join us today
+            and embark on a hassle-free journey into the realm of secure online storage at <code>blahaj.land</code> !
+        </p>
     </div>
-    <div id="portal">
-        <div id="catchphrase">
-            <h1>Welcome back uwu 👋</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                disputandum putant. Sed ut iis bonis erigimur, quae expectamus, sic laetamur iis, quae recordamur. Stulti
-                autem malorum memoria torquentur, sapientes bona praeterita non meminerunt, praesentibus non.</p>
-        </div>
-        <div id="buttons">
-            <a href="https://discord.gg/23ScBhN7xx"
-               rel="noopener noreferrer nofollow"
-               target="_blank">
-                <p>🦈</p>
-                Join blahaj.land
-            </a>
-            <a href="https://eryn.cloud/yunohost/sso"
-               rel="noopener noreferrer nofollow"
-               target="_blank">
-                <p>🖥️</p>
-                Open blahaj.land
-            </a>
-        </div>
+    <div id="buttons">
+        <a href="https://discord.gg/23ScBhN7xx"
+           rel="noopener noreferrer nofollow"
+           target="_blank">
+            <p>🦈</p>
+            Join <code>blahaj.land</code>
+        </a>
+        <a href="https://blahaj.land/yunohost/sso"
+           rel="noopener noreferrer nofollow"
+           target="_blank">
+            <p>🖥️</p>
+            Open <code>blahaj.land</code>
+        </a>
     </div>
+</div>
 
-    <div id="bp">
-        <h1>Why ?</h1>
-        <div id="bps">
-            <div>
-                <h1><p>🌐</p>Web hosting</h1>
-                <p>As long as it's legal, I'll host it.
-                    I'll give you access to your
-                    own NGINX stuff through SFTP and you can put stuff there at all I care. I moderate it though </p>
-            </div>
-            <div>
-                <h1><p>🗨️</p>Matrix</h1>
-                <p> No one uses it but I've got a Matrix homeserver, quite fast</p>
-            </div>
-            <div>
-                <h1><p>📧️</p>Emails</h1>
-                <p>That's complicated...
-                    Doesn't work and unless enough people pressure me I won't set it up</p>
-            </div>
-            <div>
-                <h1><p>💲</p>It's free!</h1>
-                <p> All accounts are free. All you gotta do is pass the vibe check >:)</p>
-            </div>
-            <div>
-                <h1><p>💾</p>Unlimited Google storage</h1>
-                <p>Using some smart techniques, I am able to provide unlimited, encrypted Google storage <b>FOR FREE!</b> I
-                    am not able to see the contents of your files or folders</p>
-            </div>
-            <div>
-                <h1><p>😽</p>The most important thing</h1>
-                <p>A furry runs it</p>
-            </div>
+<div id="bp">
+    <h1>Why ?</h1>
+    <div id="bps">
+        <div>
+            <h1><p>🌐</p>Web hosting</h1>
+            <p>Simple HTML sites can be pulled from git and hosted at <code>username.blahaj.land</code></p>
+        </div>
+        <div>
+            <h1><p>🗨️</p>Matrix</h1>
+            <p> No one uses it but I've got a Matrix homeserver, quite fast</p>
+        </div>
+        <div>
+            <h1><p>📧️</p>Emails</h1>
+            <p>Email accounts are hosted with excellent reputation IPs, ensuring no mail ever gets lost</p>
+        </div>
+        <div>
+            <h1><p>💲</p>It's free!</h1>
+            <p> All accounts are free. All you gotta do is pass the vibe check >:)</p>
+        </div>
+        <div>
+            <h1><p>💾</p>Unlimited Google storage</h1>
+            <p>Using some smart techniques, I am able to provide unlimited, encrypted Google storage <b>FOR FREE!</b> I
+                am not able to see the contents of your files or folders</p>
+        </div>
+        <div id="uwu">
+            <h1><p>😽</p>The most important thing</h1>
+            <p>A furry runs it</p>
         </div>
     </div>
-    <footer>
-        <script>$("footer").load("parts/footer.html")</script>
-    </footer>
-    </body>
-    </html>
+</div>
+<footer>
+    <script>$("footer").load("parts/footer.html")</script>
+</footer>
+<script>
+    let easteregg = {"value": 6};
+    $("#uwu").on("click", function () {
+        if (easteregg.value === 0) {
+            alert("Rawr x3 nuzzles how are you pounces on you you're so warm o3o notices you have a bulge o: someone's happy ;) nuzzles your necky wecky~ murr~ hehehe rubbies your bulgy wolgy you're so big :oooo rubbies more on your bulgy wolgy it doesn't stop growing ·///· kisses you and lickies your necky daddy likies (; nuzzles wuzzles I hope daddy really likes $: wiggles butt and squirms I want to see your big daddy meat~ wiggles butt I have a little itch o3o wags tail can you please get my itch~ puts paws on your chest nyea~ its a seven inch itch rubs your chest can you help me pwease squirms pwetty pwease sad face I need to be punished runs paws down your chest and bites lip like I need to be punished really good~ paws on your bulge as I lick my lips I'm getting thirsty. I can go for some milk unbuttons your pants as my eyes glow you smell so musky :v licks sh*ft mmmm~ so musky drools all over your c*ck your daddy meat I like fondles Mr. Fuzzy B*lls hehe puts snout on balls and inhales deeply oh god im so h*rd~ licks b*lls punish me daddy~ nyea~ squirms more and wiggles butt I love your musky goodness bites lip please punish me licks lips nyea~ s*ckles on your tip so good licks pre of your c*ck salty goodness~ eyes role back and goes b*lls deep mmmm~ m*ans and suckles");
+        }
+        easteregg.value -= 1;
+        //console.log(easteregg.value);
+    })
+</script>
+</body>
+</html>

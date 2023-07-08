@@ -3,7 +3,7 @@
 /* Functions */
 @media only screen and (min-width: 769px) and (orientation: landscape) {
   .bpfunc(@bg, @color) {
-    background: linear-gradient(fade(@color, 0%), fade(@color, 100%)), url(@bg) no-repeat center;
+    background: linear-gradient(fade(@color, 50%), fade(@color, 100%)), url(@bg) no-repeat center;
     background-size: cover;
   }
 
@@ -30,7 +30,6 @@
   }
 
   #catchphrase > * {
-    font-weight: bold;
     text-align: center;
   }
 
@@ -39,6 +38,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+
+  code {
+    text-decoration: underline solid 1px;
+    background: #20202080;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #buttons > a {
@@ -101,14 +110,14 @@
     padding: 2em 2%;
     margin-bottom: 20px;
     color: white;
+    text-align: center;
   }
 
-  #bps > div > p {
+  #catchphrase > p, #bps > div > p {
     font-size: 1.2em;
   }
 
   #bps > div > h1 {
-    text-align: center;
     margin: 0;
   }
 
@@ -140,7 +149,7 @@
 
 @media only screen and (max-width: 768px), (orientation: portrait) {
   .bpfunc(@bg, @color) {
-    background: linear-gradient(fade(@color, 0%), fade(@color, 100%)), url(@bg) no-repeat center;
+    background: linear-gradient(fade(@color, 50%), fade(@color, 100%)), url(@bg) no-repeat center;
     background-size: cover;
   }
 
@@ -153,8 +162,18 @@
     color: white;
   }
 
+  code {
+    text-decoration: underline solid 1px;
+    background: #20202080;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   #catchphrase {
-    padding: 0 20px;
+    padding: 3vh;
     .bpfunc("../im/bp/catchphrase.jpg", #43A3B0);
     border-radius: 30px;
     flex-grow: 1;
@@ -166,7 +185,6 @@
   }
 
   #catchphrase > * {
-    font-weight: bold;
     text-align: center;
   }
 
@@ -205,7 +223,7 @@
   }
 
   #buttons > a > p, #bps > div > h1 > p {
-    font-size: 80px;
+    font-size: 6vh;
     margin: 10px;
   }
 
@@ -229,14 +247,14 @@
     padding: 3vh;
     margin-bottom: 2vh;
     color: white;
+    text-align: center;
   }
 
-  #bps > div > p {
+  #catchphrase > p, #bps > div > p {
     font-size: 1.2em;
   }
 
   #bps > div > h1 {
-    text-align: center;
     margin: 0;
   }
 

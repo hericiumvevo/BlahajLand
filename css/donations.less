@@ -2,7 +2,7 @@
 
 @media only screen and (min-width: 769px) and (orientation: landscape) {
   .bpfunc(@bg, @color) {
-    background: linear-gradient(fade(@color, 0%), fade(@color, 100%)), url(@bg) no-repeat center;
+    background: linear-gradient(fade(@color, 50%), fade(@color, 100%)), url(@bg) no-repeat center;
     background-size: cover;
   }
 
@@ -58,9 +58,16 @@
     margin: 10px;
   }
 
-  #kofi > img {
+  #kofi {
+    display: flex;
+    align-items: stretch;
+    flex-grow: 1;
+    width: 40%;
+    height: 100%;
+  }
+
+  #kofi > * {
     border-radius: 15px;
-    object-fit: contain
   }
 
   #dns ul {
@@ -76,7 +83,7 @@
     color: inherit;
   }
 
-  #dns code {
+  code {
     text-decoration: underline solid 1px;
     background: #20202080;
     color: white;
@@ -89,7 +96,7 @@
 @media only screen and (max-width: 768px), (orientation: portrait) {
 
   .bpfunc(@bg, @color) {
-    background: linear-gradient(fade(@color, 0%), fade(@color, 100%)), url(@bg) no-repeat center;
+    background: linear-gradient(fade(@color, 50%), fade(@color, 100%)), url(@bg) no-repeat center;
     background-size: cover;
   }
 
@@ -138,13 +145,18 @@
   }
 
   #dns > div > h2 > p {
-    font-size: 80px;
+    font-size: 6vh;
     margin: 10px;
   }
 
-  #kofi > img {
-    border-radius: 30px;
-    width: 100%;
+  #kofi {
+    display: flex;
+    align-items: stretch;
+    flex-grow: 1;
+  }
+
+  #kofi > * {
+    border-radius: 15px;
   }
 
   #dns ul {
@@ -161,7 +173,7 @@
     color: inherit;
   }
 
-  #dns code {
+  code {
     text-decoration: underline solid 1px;
     background: #20202080;
     color: white;
