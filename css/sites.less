@@ -1,101 +1,198 @@
 @import "base.css";
 
-#websites {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-}
+@media only screen and (min-width: 769px) {
 
-#wl {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+  #websites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
 
-#websites > h1 {
-  margin: 0;
-}
+  #wl {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-#websites > h2 {
-  margin: 0 0 1.5em;
-}
+  #websites > h1 {
+    margin: 0;
+  }
 
-#wl > a {
-  flex-basis: 28%;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 2em 2%;
-  margin-bottom: 20px;
-  text-align: center;
-}
+  #websites > h2 {
+    margin: 0 0 1.5em;
+  }
 
-#wl > a > h2 {
-  margin: 0;
-}
+  #wl > a {
+    flex-basis: 28%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2em 2%;
+    margin-bottom: 20px;
+    text-align: center;
+    color: inherit !important;
+    text-decoration: none !important;
+  }
 
-#wl > a > h2 > p {
-  font-size: 80px;
-  margin: 10px;
-}
+  #wl > a > h2 {
+    margin: 0;
+  }
 
-#wl > a > p {
-  font-size: 1.2em;
-  margin: 10px;
-}
+  #wl > a > h2 > p {
+    font-size: 80px;
+    margin: 10px;
+  }
 
-#wl > a > code {
-  text-decoration: underline solid 1px;
-  background: #20202080;
-  color: white;
-  border-radius: 5px;
-  padding: 5px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  #wl > a > p {
+    font-size: 1.2em;
+    margin: 10px;
+  }
 
-#wl > a[href=""] {
-  opacity: 0.5;
-  cursor: default;
-}
+  #wl > a > code {
+    text-decoration: underline solid 1px;
+    background: #20202080;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-#wl > a:not([href=""]) {
-  transition: scale 0.25s;
-}
+  #wl > a[href=""] {
+    opacity: 0.5;
+    cursor: default;
+  }
 
-#wl > a:not([href=""]):hover {
-  scale: 1.1;
-}
+  #wl > a:not([href=""]) {
+    transition: scale 0.25s;
+  }
 
-#wl > a:nth-of-type(1) {
-  background: #3D7989
-}
+  #wl > a:not([href=""]):hover {
+    scale: 1.1;
+  }
 
-#wl > a:nth-of-type(2) {
-  background: #618994
-}
+  #wl > a:nth-of-type(1) {
+    background: #3D7989
+  }
 
-#wl > a:nth-of-type(3) {
-  background: #87999F
-}
+  #wl > a:nth-of-type(2) {
+    background: #618994
+  }
 
-#wl > a:nth-of-type(4) {
-  background: #A9A8AA
-}
+  #wl > a:nth-of-type(3) {
+    background: #87999F
+  }
 
-#wl > a:nth-of-type(5) {
-  background: #CAB7B4
-}
+  #wl > a:nth-of-type(4) {
+    background: #A9A8AA
+  }
 
-#wl > a:nth-of-type(6) {
+  #wl > a:nth-of-type(5) {
+    background: #CAB7B4
+  }
+
+  #wl > a:nth-of-type(6) {
     background: #EDC6BE
+  }
 }
 
-a {
-  color: inherit !important;
-  text-decoration: none !important;
+@media only screen and (max-width: 768px) {
+  #websites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  #wl {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #websites > h1 {
+    margin: 0;
+  }
+
+  #websites > h2 {
+    margin: 0 0 1.5em;
+  }
+
+  #wl > a {
+    flex-basis: 28%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  #wl > a > h2 {
+    margin: 0;
+  }
+
+  #wl > a > h2 > p {
+    font-size: 80px;
+    margin: 10px;
+  }
+
+  #wl > a > p {
+    font-size: 1.2em;
+    margin: 10px;
+  }
+
+  #wl > a > code {
+    text-decoration: underline solid 1px;
+    background: #20202080;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #wl > a[href=""] {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  #wl > a:not([href=""]) {
+    transition: scale 0.25s;
+  }
+
+  #wl > a:not([href=""]):hover {
+    scale: 1.1;
+  }
+
+  #wl > a:nth-of-type(1) {
+    background: #3D7989
+  }
+
+  #wl > a:nth-of-type(2) {
+    background: #618994
+  }
+
+  #wl > a:nth-of-type(3) {
+    background: #87999F
+  }
+
+  #wl > a:nth-of-type(4) {
+    background: #A9A8AA
+  }
+
+  #wl > a:nth-of-type(5) {
+    background: #CAB7B4
+  }
+
+  #wl > a:nth-of-type(6) {
+    background: #EDC6BE
+  }
 }

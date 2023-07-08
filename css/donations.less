@@ -1,0 +1,171 @@
+@import "base.css";
+
+@media only screen and (min-width: 769px) {
+  .bpfunc(@bg, @color) {
+    background: linear-gradient(fade(@color, 0%), fade(@color, 100%)), url(@bg) no-repeat center;
+    background-size: cover;
+  }
+
+  #window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  #donations {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  #dns {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    align-items: stretch;
+  }
+
+  #dns > div {
+    background: #808080;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2em 2%;
+    text-align: center;
+  }
+
+  #dns > div:nth-of-type(1) {
+    background: #66a5b4;
+  }
+
+  #dns > div:nth-of-type(2) {
+    background: #EDC6BE;
+    margin-top: 20px;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+
+  #dns > div > p {
+    font-size: 1.2em;
+  }
+
+  #dns > div > h2 > p {
+    font-size: 80px;
+    margin: 10px;
+  }
+
+  #kofi > img {
+    border-radius: 15px;
+    object-fit: contain
+  }
+
+  #dns ul {
+    list-style-type: none;
+  }
+
+  #dns li {
+    margin: 0.5em;
+  }
+
+  #dns a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  #dns code {
+    text-decoration: underline solid 1px;
+    background: #20202080;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .bpfunc(@bg, @color) {
+    background: linear-gradient(fade(@color, 0%), fade(@color, 100%)), url(@bg) no-repeat center;
+    background-size: cover;
+  }
+
+  #window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  #donations {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #dns {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #dns > div {
+    background: #808080;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    text-align: center;
+  }
+
+  #dns > div:nth-of-type(1) {
+    background: #66a5b4;
+  }
+
+  #dns > div:nth-of-type(2) {
+    background: #EDC6BE;
+    margin-top: 20px;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+
+  #dns > div > p {
+    font-size: 1.2em;
+  }
+
+  #dns > div > h2 > p {
+    font-size: 80px;
+    margin: 10px;
+  }
+
+  #kofi > img {
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  #dns ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #dns li {
+    margin: 0.5em;
+  }
+
+  #dns a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  #dns code {
+    text-decoration: underline solid 1px;
+    background: #20202080;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
