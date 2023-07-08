@@ -138,7 +138,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), (orientation: portrait) {
   .bpfunc(@bg, @color) {
     background: linear-gradient(fade(@color, 0%), fade(@color, 100%)), url(@bg) no-repeat center;
     background-size: cover;
