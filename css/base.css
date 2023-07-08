@@ -1,9 +1,12 @@
+@import "animations.css";
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: Inter, sans-serif;
+    animation: Hewwo 1s;
 }
 
 body > div {

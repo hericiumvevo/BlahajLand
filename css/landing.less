@@ -1,0 +1,139 @@
+@import "base.css";
+
+/* Functions */
+
+.bpfunc(@bg, @color) {
+  background: linear-gradient(fade(@color,0%), fade(@color, 100%)), url(@bg) no-repeat center;
+  background-size: cover;
+}
+
+#portal {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  color: white;
+}
+
+#catchphrase {
+  padding: 0 100px;
+  .bpfunc("../im/placeholder.jpg",#43A3B0);
+  border-radius: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+#catchphrase > * {
+  font-weight: bold;
+  text-align: center;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#buttons > a {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  transition: scale 0.25s, opacity 0.25s;
+}
+
+#buttons > a:nth-of-type(1) {
+  background: #3D7989
+}
+
+#buttons > a:nth-of-type(2) {
+  background: #EDC6BE;
+  color: #202020
+}
+
+#buttons > a:hover {
+  scale: 1.1;
+  opacity: 75%;
+}
+
+#buttons > a > p, #bps > div > h1 > p {
+  font-size: 80px;
+  margin: 10px;
+}
+
+#buttons > a:first-of-type {
+  margin-bottom: 20px;
+}
+
+#bp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bps {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#bps > * {
+  flex-basis: 28%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 2em 2%;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#bps > div > p {
+  font-size: 1.2em;
+}
+
+#bps > div > h1 {
+  text-align: center;
+  margin: 0;
+}
+
+
+#bps > *:nth-of-type(1) {
+  .bpfunc('../im/bp/1.jpg',#264653)
+}
+
+#bps > *:nth-of-type(2) {
+  .bpfunc('../im/bp/2.jpg',#2a9d8f)
+}
+
+#bps > *:nth-of-type(3) {
+  .bpfunc('../im/bp/3.jpg', #c4932e)
+}
+
+#bps > *:nth-of-type(4) {
+  .bpfunc('../im/bp/4.jpg', #d5782e)
+}
+
+#bps > *:nth-of-type(5) {
+  .bpfunc('../im/bp/5.jpg',#e76f51)
+}
+
+#bps > *:nth-of-type(6) {
+  .bpfunc('../im/bp/6.jpg', #bd5a69)
+}

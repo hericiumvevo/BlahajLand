@@ -1,84 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>blahaj.land</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <link rel="icon" href="im/fav.png">
-    <link rel="stylesheet" href="css/landing.css">
     <meta name="description" content="A small, free hosting service ran by a kitty">
     <meta property="og:title" content="blahaj.land">
     <meta property="og:description" content="A small, free hosting service ran by a kitty">
-    <!--meta property="og:image" content="http:... (see cover)"-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-</head>
-<body>
-<div id="navbar">
-    <script>
-        $("#navbar").load("parts/navbar.html", function (response, status, xhr) {
-            if (status === "error") {
-                let msg = "Sorry but there was an error: ";
-                console.log(msg + xhr.status + " " + xhr.statusText);
-            }
-        })
-    </script>
-</div>
-<div id="portal">
-    <div id="catchphrase">
-        <h1>Welcome back uwu 👋</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            disputandum putant. Sed ut iis bonis erigimur, quae expectamus, sic laetamur iis, quae recordamur. Stulti
-            autem malorum memoria torquentur, sapientes bona praeterita non meminerunt, praesentibus non.</p>
+    <meta charset="UTF-8">
+        <title>blahaj.land</title>
+        <link rel="stylesheet/less" type="text/css" href="css/landing.less" />
+        <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    </head>
+    <body>
+    <div id="navbar">
+        <script>$("#navbar").load("parts/navbar.html")</script>
     </div>
-    <div id="buttons">
-        <a href="https://discord.gg/23ScBhN7xx"
-           rel="noopener noreferrer nofollow"
-           target="_blank"
-           style="background: #3D7989">
-            <p>🐾</p>
-            Join blahaj.land
-        </a>
-        <a href="https://eryn.cloud/yunohost/sso"
-           rel="noopener noreferrer nofollow"
-           target="_blank"
-           style="background: #EDC6BE">
-            <p>🖥️</p>
-            Open blahaj.land
-        </a>
+    <div id="portal">
+        <div id="catchphrase">
+            <h1>Welcome back uwu 👋</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                disputandum putant. Sed ut iis bonis erigimur, quae expectamus, sic laetamur iis, quae recordamur. Stulti
+                autem malorum memoria torquentur, sapientes bona praeterita non meminerunt, praesentibus non.</p>
+        </div>
+        <div id="buttons">
+            <a href="https://discord.gg/23ScBhN7xx"
+               rel="noopener noreferrer nofollow"
+               target="_blank">
+                <p>🦈</p>
+                Join blahaj.land
+            </a>
+            <a href="https://eryn.cloud/yunohost/sso"
+               rel="noopener noreferrer nofollow"
+               target="_blank">
+                <p>🖥️</p>
+                Open blahaj.land
+            </a>
+        </div>
     </div>
-</div>
 
-<div id="bp">
-    <h1>Why ?</h1>
-    <div id="bps">
-        <div style="background: #3D7989">
-            <h1><p>🌐</p>Web hosting</h1>
-            <p>As long as it's legal, I'll host it.
-                I'll give you access to your
-                own NGINX stuff through SFTP and you can put stuff there at all I care. I moderate it though </p>
-        </div>
-        <div style="background: #618994">
-            <h1><p>🗨️</p>Matrix</h1>
-            <p> No one uses it but I've got a Matrix homeserver, quite fast</p>
-        </div>
-        <div style="background: #87999F">
-            <h1><p>📧️</p>Emails</h1>
-            <p>That's complicated...
-                Doesn't work and unless enough people pressure me I won't set it up</p>
-        </div>
-        <div style="background: #A9A8AA">
-            <h1><p>💲</p>It's free!</h1>
-            <p> All accounts are free. All you gotta do is pass the vibe check >:)</p>
-        </div>
-        <div style="background: #CAB7B4">
-            <h1><p>💾</p>Unlimited Google storage</h1>
-            <p>Using some smart techniques, I am able to provide unlimited, encrypted Google storage <b>FOR FREE!</b> I
-                am not able to see the contents of your files or folders</p>
-        </div>
-        <div style="background: #EDC6BE">
-            <h1><p>😽</p>The most important thing</h1>
-            <p>A furry runs it</p>
+    <div id="bp">
+        <h1>Why ?</h1>
+        <div id="bps">
+            <div>
+                <h1><p>🌐</p>Web hosting</h1>
+                <p>As long as it's legal, I'll host it.
+                    I'll give you access to your
+                    own NGINX stuff through SFTP and you can put stuff there at all I care. I moderate it though </p>
+            </div>
+            <div>
+                <h1><p>🗨️</p>Matrix</h1>
+                <p> No one uses it but I've got a Matrix homeserver, quite fast</p>
+            </div>
+            <div>
+                <h1><p>📧️</p>Emails</h1>
+                <p>That's complicated...
+                    Doesn't work and unless enough people pressure me I won't set it up</p>
+            </div>
+            <div>
+                <h1><p>💲</p>It's free!</h1>
+                <p> All accounts are free. All you gotta do is pass the vibe check >:)</p>
+            </div>
+            <div>
+                <h1><p>💾</p>Unlimited Google storage</h1>
+                <p>Using some smart techniques, I am able to provide unlimited, encrypted Google storage <b>FOR FREE!</b> I
+                    am not able to see the contents of your files or folders</p>
+            </div>
+            <div>
+                <h1><p>😽</p>The most important thing</h1>
+                <p>A furry runs it</p>
+            </div>
         </div>
     </div>
-</div>
-</body>
-</html>
+    </body>
+    </html>

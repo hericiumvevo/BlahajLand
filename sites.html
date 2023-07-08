@@ -1,71 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sites - blahaj.land</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <link rel="icon" href="im/fav.png">
-    <link rel="stylesheet" href="css/sites.css">
     <meta name="description" content="A small, free hosting service ran by a kitty">
     <meta property="og:title" content="blahaj.land">
     <meta property="og:description" content="A small, free hosting service ran by a kitty">
-    <!--meta property="og:image" content="http:... (see cover)"-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Sites - blahaj.land</title>
+    <link rel="stylesheet/less" type="text/css" href="css/sites.less">
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
 </head>
 <body>
 <div id="navbar">
-    <script>
-        $("#navbar").load("parts/navbar.html", function (response, status, xhr) {
-            if (status === "error") {
-                let msg = "Sorry but there was an error: ";
-                console.log(msg + xhr.status + " " + xhr.statusText);
-            }
-        })
-    </script>
+    <script>$("#navbar").load("parts/navbar.html")</script>
 </div>
 <div id="websites">
     <h1>Sites</h1>
     <h2>Here you can view our user's sites :3</h2>
     <div id="wl">
-        <div style="background: #3D7989">
-            <h3><p>🇧</p>Ben</h3>
-            <ul>
-                <li><a href="https://ben.eryn.cloud"
-                        target="_blank"
-                       rel="noreferrer noopener">ben.eryn.cloud</a></li>
-            </ul>
-        </div>
-        <div style="background: #618994">
-            <h3><p>🇲</p>Magnetron</h3>
-            <ul>
-                <li><a href="https://magnetron.eryn.cloud"
-                    target="_blank"
-                    rel="noreferrer noopener">magnetron.eryn.cloud</a></li>
-            </ul>
-        </div>
-        <div style="background: #87999F">
-            <h3><p>🇿</p>ziv</h3>
-            <ul>
-                <li>Nothing...</li>
-            </ul>
-        </div>
-        <div style="background: #A9A8AA">
-            <h3><p>🇱</p>Lucy</h3>
-            <ul>
-                <li>Nothing...</li>
-            </ul>
-        </div>
-        <div style="background: #CAB7B4">
-            <h3><p>🇿</p>Zoey</h3>
-            <ul>
-                <li>Nothing...</li>
-            </ul>
-        </div>
-        <div style="background: #EDC6BE">
-            <h3><p>🇪</p>Eryn</h3>
-            <ul>
-                <li>Nothing...</li>
-            </ul>
-        </div>
+        <a href="https://ben.eryn.cloud"
+           target="_blank"
+           rel="noreferrer noopener">
+            <h2><p>🇧</p>Ben</h2>
+            <code>ben.eryn.cloud</code></a>
+        <a href="https://magnetron.eryn.cloud"
+           target="_blank"
+           rel="noreferrer noopener">
+            <h2><p>🇲</p>Magnetron</h2>
+            <code>magnetron.eryn.cloud</code></a>
+        <a href="https://eryn.cloud/ziv/"
+           target="_blank"
+           rel="noreferrer noopener">
+            <h2><p>🇿</p>ziv</h2>
+            <code>eryn.cloud/ziv</code></a>
+        <a href="">
+            <h2><p>🇱</p>Lucy</h2>
+            <p>Nothing...</p></a>
+        <a href="">
+            <h2><p>🇿</p>Zoey</h2>
+            <p>Nothing...</p></a>
+        <a href="">
+            <h2><p>🇪</p>Eryn</h2>
+            <p>Nothing...</p></a>
     </div>
 </div>
 </body>

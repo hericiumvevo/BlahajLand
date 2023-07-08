@@ -1,0 +1,11 @@
+@keyframes Hewwo {
+    0% {
+        transform: translateY(50%);
+        visibility: visible;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
