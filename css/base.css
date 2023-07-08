@@ -14,3 +14,9 @@ body {
 body > div {
     margin: 5% auto;
 }
+
+@media only screen and (max-width: 768px), (orientation: portrait) {
+    html {
+        font-size: 3vw;
+    }
+}
