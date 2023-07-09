@@ -18,6 +18,7 @@ switch (document.cookie) {
         break;
     case "theme=light":
         switchTheme("light");
+        break;
     default:
         const isOsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         switchTheme(isOsDark?"dark":"light");
