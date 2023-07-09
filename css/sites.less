@@ -1,4 +1,4 @@
-@import "base.css";
+@import "base.less";
 
 @media only screen and (min-width: 769px) and (orientation: landscape) {
 
@@ -44,7 +44,7 @@
 
   #wl > a > h2 > p {
     font-size: 80px;
-    margin: 10px;
+    margin: 0;
   }
 
   #wl > a > p {
@@ -54,8 +54,8 @@
 
   code {
     text-decoration: underline solid 1px;
-    background: #20202080;
-    color: white;
+    background: var(--code-color);
+    color: var(--alt-text-color);
     border-radius: 5px;
     padding: 5px;
     margin-left: auto;
@@ -76,27 +76,27 @@
   }
 
   #wl > a:nth-of-type(1) {
-    background: #3D7989
+    background: var(--gradient-1)
   }
 
   #wl > a:nth-of-type(2) {
-    background: #618994
+    background: var(--gradient-2)
   }
 
   #wl > a:nth-of-type(3) {
-    background: #87999F
+    background: var(--gradient-3)
   }
 
   #wl > a:nth-of-type(4) {
-    background: #A9A8AA
+    background: var(--gradient-4)
   }
 
   #wl > a:nth-of-type(5) {
-    background: #CAB7B4
+    background: var(--gradient-5)
   }
 
   #wl > a:nth-of-type(6) {
-    background: #EDC6BE
+    background: var(--gradient-6)
   }
 }
 
@@ -141,7 +141,7 @@
 
   #wl > a > h2 > p {
     font-size: 6vh;
-    margin: 10px;
+    margin: 0;
   }
 
   #wl > a > p {
@@ -151,8 +151,8 @@
 
   code {
     text-decoration: underline solid 1px;
-    background: #20202080;
-    color: white;
+    background: var(--code-color);
+    color: var(--alt-text-color);
     border-radius: 5px;
     padding: 5px;
     margin-left: auto;
@@ -173,26 +173,26 @@
   }
 
   #wl > a:nth-of-type(1) {
-    background: #3D7989
+    background: var(--gradient-1)
   }
 
   #wl > a:nth-of-type(2) {
-    background: #618994
+    background: var(--gradient-2)
   }
 
   #wl > a:nth-of-type(3) {
-    background: #87999F
+    background: var(--gradient-3)
   }
 
   #wl > a:nth-of-type(4) {
-    background: #A9A8AA
+    background: var(--gradient-4)
   }
 
   #wl > a:nth-of-type(5) {
-    background: #CAB7B4
+    background: var(--gradient-5)
   }
 
   #wl > a:nth-of-type(6) {
-    background: #EDC6BE
+    background: var(--gradient-6)
   }
 }

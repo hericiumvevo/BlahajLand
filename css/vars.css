@@ -1,0 +1,68 @@
+/* Glossary :
+
+--code-color : background color for the "code" tags, used for displaying a link
+--primary | secondary -color : colors used for the 2 buttons on the main page
+--catch-color : color used for the welcome screen
+    --catch-alp-color : --catch-color but with a different opacity, needed for gradient
+--gradient-# : color used for each block in both the "Sites" and "Services" page
+--pop-# : color used for each o the bullet points situated on the main page (under the "Why ?" section)
+    --alp-# : --pop-# but with a different opacity, needed for gradient
+*/
+
+:root[data-theme="theme-light"] {
+    --bg-color: #FFFFFF;
+    --default-text-color: #202020;
+    --alt-text-color: #FFFFFF;
+    --code-color: #00000080;
+    --primary-color: #3D7989;
+    --secondary-color: #EDC6BE;
+    --catch-color: #43A3B0;
+    --catch-alp-color: #43A3B000;
+    --gradient-1: #3D7989;
+    --gradient-2: #618994;
+    --gradient-3: #87999F;
+    --gradient-4: #A9A8AA;
+    --gradient-5: #CAB7B4;
+    --gradient-6: #EDC6BE;
+    --pop-1: #264653FF;
+    --pop-2: #2a9d8fFF;
+    --pop-3: #c4932eFF;
+    --pop-4: #d5782eFF;
+    --pop-5: #e76f51FF;
+    --pop-6: #bd5a69FF;
+    --alp-1: #26465300;
+    --alp-2: #2a9d8f00;
+    --alp-3: #c4932e00;
+    --alp-4: #d5782e00;
+    --alp-5: #e76f5100;
+    --alp-6: #bd5a6900;
+}
+
+:root[data-theme="theme-dark"] {
+    --bg-color: #202020;
+    --default-text-color: #FFFFFF;
+    --alt-text-color: #202020;
+    --code-color: #FFFFFF80;
+    --primary-color: #40aacc;
+    --secondary-color: #a44c70;
+    --catch-color: #5ce9ff;
+    --catch-alp-color: #5ce9ff40;
+    --gradient-1: #2c5965;
+    --gradient-2: #445f67;
+    --gradient-3: #586367;
+    --gradient-4: #6d6c6e;
+    --gradient-5: #807371;
+    --gradient-6: #a48983;
+    --pop-1: #59aacb;
+    --pop-2: #42efdb;
+    --pop-3: #ffbf35;
+    --pop-4: #ff9237;
+    --pop-5: #ff7e5e;
+    --pop-6: #ff748b;
+    --alp-1: #59aacb40;
+    --alp-2: #42efdb40;
+    --alp-3: #ffbf3540;
+    --alp-4: #ff923740;
+    --alp-5: #ff7e5e40;
+    --alp-6: #ff748b40;
+}

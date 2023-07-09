@@ -1,16 +1,15 @@
-@import "base.css";
+@import "base.less";
 
 @media only screen and (min-width: 769px) and (orientation: landscape) {
-  .bpfunc(@bg, @color) {
-    background: linear-gradient(fade(@color, 50%), fade(@color, 100%)), url(@bg) no-repeat center;
-    background-size: cover;
-  }
-
   #window {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
+  }
+
+  #window > h1 {
+    margin: 0 0 1em;
   }
 
   #donations {
@@ -33,7 +32,6 @@
   }
 
   #dns > div {
-    background: #808080;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -43,11 +41,13 @@
   }
 
   #dns > div:nth-of-type(1) {
-    background: #66a5b4;
+    background: var(--primary-color);
+    color: var(--alt-text-color);
   }
 
   #dns > div:nth-of-type(2) {
-    background: #EDC6BE;
+    background: var(--secondary-color);
+    color: var(--default-text-color);
     margin-top: 20px;
     flex-shrink: 1;
     flex-grow: 1;
@@ -57,9 +57,13 @@
     font-size: 1.2em;
   }
 
+  #dns > div > h2 {
+    margin: 0;
+  }
+
   #dns > div > h2 > p {
     font-size: 80px;
-    margin: 10px;
+    margin: 0;
   }
 
   #kofi {
@@ -75,7 +79,7 @@
 
   #dns ul {
     list-style-type: none;
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: bold;
   }
 
@@ -90,8 +94,8 @@
 
   code {
     text-decoration: underline solid 1px;
-    background: #20202080;
-    color: white;
+    background: var(--code-color);
+    color: var(--alt-text-color);
     border-radius: 5px;
     padding: 5px;
 
@@ -99,17 +103,15 @@
 }
 
 @media only screen and (max-width: 768px), (orientation: portrait) {
-
-  .bpfunc(@bg, @color) {
-    background: linear-gradient(fade(@color, 50%), fade(@color, 100%)), url(@bg) no-repeat center;
-    background-size: cover;
-  }
-
   #window {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
+  }
+
+  #window > h1 {
+    margin: 0 0 1em;
   }
 
   #donations {
@@ -125,7 +127,6 @@
   }
 
   #dns > div {
-    background: #808080;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -135,14 +136,20 @@
   }
 
   #dns > div:nth-of-type(1) {
-    background: #66a5b4;
+    background: var(--primary-color);
+    color: var(--alt-text-color);
   }
 
   #dns > div:nth-of-type(2) {
-    background: #EDC6BE;
+    background: var(--secondary-color);
+    color: var(--default-text-color);
     margin-top: 2vh;
     flex-shrink: 1;
     flex-grow: 1;
+  }
+
+  #dns > div > h2 {
+    margin: 0;
   }
 
   #dns > div > p {
@@ -151,7 +158,7 @@
 
   #dns > div > h2 > p {
     font-size: 6vh;
-    margin: 10px;
+    margin: 0;
   }
 
   #dns li > a {
@@ -172,7 +179,7 @@
 
   #dns ul {
     list-style-type: none;
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: bold;
     padding: 0;
   }
@@ -192,8 +199,8 @@
 
   code {
     text-decoration: underline solid 1px;
-    background: #20202080;
-    color: white;
+    background: var(--code-color);
+    color: var(--alt-text-color);
     border-radius: 5px;
     padding: 5px;
   }

@@ -1,12 +1,11 @@
-@import "base.css";
+@import "base";
 
-/* Functions */
+.bpfunc(@bg, @color1, @color2) {
+  background: linear-gradient(@color1, @color2), url(@bg) no-repeat center;
+  background-size: cover;
+}
+
 @media only screen and (min-width: 769px) and (orientation: landscape) {
-  .bpfunc(@bg, @color) {
-    background: linear-gradient(fade(@color, 50%), fade(@color, 100%)), url(@bg) no-repeat center;
-    background-size: cover;
-  }
-
   #portal {
     width: 90%;
     height: 50%;
@@ -14,12 +13,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    color: white;
+    color: var(--alt-text-color);
   }
 
   #catchphrase {
     padding: 0 100px;
-    .bpfunc("../im/bp/catchphrase.jpg", #43A3B0);
+    .bpfunc("../im/bp/catchphrase.jpg", var(--catch-alp-color), var(--catch-color));
     border-radius: 30px;
     flex-grow: 1;
     display: flex;
@@ -42,8 +41,8 @@
 
   code {
     text-decoration: underline solid 1px;
-    background: #20202080;
-    color: white;
+    background: var(--code-color);
+    color: var(--alt-text-color);
     border-radius: 5px;
     padding: 5px;
     margin-left: auto;
@@ -67,12 +66,12 @@
   }
 
   #buttons > a:nth-of-type(1) {
-    background: #3D7989
+    background: var(--primary-color);
   }
 
   #buttons > a:nth-of-type(2) {
-    background: #EDC6BE;
-    color: #202020
+    background: var(--secondary-color);
+    color: var(--default-text-color);
   }
 
   #buttons > a:hover {
@@ -81,7 +80,7 @@
 
   #buttons > a > p, #bps > div > h1 > p {
     font-size: 80px;
-    margin: 10px;
+    margin: 0;
   }
 
   #buttons > a:first-of-type {
@@ -93,6 +92,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  #bp > h1 {
+    margin: 0 0 1em;
   }
 
   #bps {
@@ -109,7 +112,7 @@
     flex-direction: column;
     padding: 2em 2%;
     margin-bottom: 20px;
-    color: white;
+    color: var(--alt-text-color);
     text-align: center;
   }
 
@@ -121,37 +124,32 @@
     margin: 0;
   }
 
-
   #bps > *:nth-of-type(1) {
-    .bpfunc('../im/bp/1.jpg', #264653)
+    .bpfunc('../im/bp/1.jpg', var(--alp-1), var(--pop-1))
   }
 
   #bps > *:nth-of-type(2) {
-    .bpfunc('../im/bp/2.jpg', #2a9d8f)
+    .bpfunc('../im/bp/2.jpg', var(--alp-2), var(--pop-2))
   }
 
   #bps > *:nth-of-type(3) {
-    .bpfunc('../im/bp/3.jpg', #c4932e)
+    .bpfunc('../im/bp/3.jpg', var(--alp-3), var(--pop-3))
   }
 
   #bps > *:nth-of-type(4) {
-    .bpfunc('../im/bp/4.jpg', #d5782e)
+    .bpfunc('../im/bp/4.jpg', var(--alp-4), var(--pop-4))
   }
 
   #bps > *:nth-of-type(5) {
-    .bpfunc('../im/bp/5.jpg', #e76f51)
+    .bpfunc('../im/bp/5.jpg', var(--alp-5), var(--pop-5))
   }
 
   #bps > *:nth-of-type(6) {
-    .bpfunc('../im/bp/6.jpg', #bd5a69)
+    .bpfunc('../im/bp/6.jpg', var(--alp-6), var(--pop-6))
   }
 }
 
 @media only screen and (max-width: 768px), (orientation: portrait) {
-  .bpfunc(@bg, @color) {
-    background: linear-gradient(fade(@color, 50%), fade(@color, 100%)), url(@bg) no-repeat center;
-    background-size: cover;
-  }
 
   #portal {
     width: 90%;
@@ -159,13 +157,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    color: white;
+    color: var(--alt-text-color);
   }
 
   code {
     text-decoration: underline solid 1px;
-    background: #20202080;
-    color: white;
+    background: var(--code-color);
+    color: var(--alt-text-color);
     border-radius: 5px;
     padding: 5px;
     margin-left: auto;
@@ -174,7 +172,7 @@
 
   #catchphrase {
     padding: 3vh;
-    .bpfunc("../im/bp/catchphrase.jpg", #43A3B0);
+    .bpfunc("../im/bp/catchphrase.jpg", var(--catch-alp-color), var(--catch-color));
     border-radius: 30px;
     flex-grow: 1;
     display: flex;
@@ -210,12 +208,12 @@
   }
 
   #buttons > a:nth-of-type(1) {
-    background: #3D7989
+    background: var(--primary-color);
   }
 
   #buttons > a:nth-of-type(2) {
-    background: #EDC6BE;
-    color: #202020
+    background: var(--secondary-color);
+    color: var(--default-text-color);
   }
 
   #buttons > a:hover {
@@ -224,7 +222,7 @@
 
   #buttons > a > p, #bps > div > h1 > p {
     font-size: 6vh;
-    margin: 10px;
+    margin: 0;
   }
 
   #bp {
@@ -232,6 +230,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  #bp > h1 {
+    margin: 0 0 1em;
   }
 
   #bps {
@@ -246,7 +248,7 @@
     flex-direction: column;
     padding: 3vh;
     margin-bottom: 2vh;
-    color: white;
+    color: var(--alt-text-color);
     text-align: center;
   }
 
@@ -259,26 +261,26 @@
   }
 
   #bps > *:nth-of-type(1) {
-    .bpfunc('../im/bp/1.jpg', #264653)
+    .bpfunc('../im/bp/1.jpg', var(--alp-1), var(--pop-1))
   }
 
   #bps > *:nth-of-type(2) {
-    .bpfunc('../im/bp/2.jpg', #2a9d8f)
+    .bpfunc('../im/bp/2.jpg', var(--alp-2), var(--pop-2))
   }
 
   #bps > *:nth-of-type(3) {
-    .bpfunc('../im/bp/3.jpg', #c4932e)
+    .bpfunc('../im/bp/3.jpg', var(--alp-3), var(--pop-3))
   }
 
   #bps > *:nth-of-type(4) {
-    .bpfunc('../im/bp/4.jpg', #d5782e)
+    .bpfunc('../im/bp/4.jpg', var(--alp-4), var(--pop-4))
   }
 
   #bps > *:nth-of-type(5) {
-    .bpfunc('../im/bp/5.jpg', #e76f51)
+    .bpfunc('../im/bp/5.jpg', var(--alp-5), var(--pop-5))
   }
 
   #bps > *:nth-of-type(6) {
-    .bpfunc('../im/bp/6.jpg', #bd5a69)
+    .bpfunc('../im/bp/6.jpg', var(--alp-6), var(--pop-6))
   }
 }
