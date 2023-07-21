@@ -36,6 +36,7 @@
     --alp-4: #C19EE080;
     --alp-5: #B185DB80;
     --alp-6: #A06CD580;
+    --links-color: #4939be;
 }
 
 :root[data-theme="theme-dark"] {
@@ -65,4 +66,5 @@
     --alp-4: #815AC080;
     --alp-5: #7251B580;
     --alp-6: #6247AA80;
+    --links-color: #9395ff;
 }
