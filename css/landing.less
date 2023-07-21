@@ -26,6 +26,8 @@
     align-items: center;
     justify-content: center;
     margin-right: 20px;
+    box-shadow: 0 2vh 2vh 0 rgba(0, 0, 0, 0.25);
+    color: white;
   }
 
   #catchphrase > * {
@@ -56,13 +58,14 @@
     height: 200px;
     align-items: center;
     justify-content: center;
-    color: inherit;
     font-weight: bold;
     text-decoration: none;
     border-radius: 30px;
     flex-grow: 1;
     flex-shrink: 1;
     transition: scale 0.25s;
+    box-shadow: 0 2vh 2vh 0 rgba(0, 0, 0, 0.25);
+    color: white;
   }
 
   #buttons > a:nth-of-type(1) {
@@ -71,16 +74,16 @@
 
   #buttons > a:nth-of-type(2) {
     background: var(--secondary-color);
-    color: var(--default-text-color);
   }
 
   #buttons > a:hover {
     scale: 1.1;
   }
 
-  #buttons > a > p, #bps > div > h2 > p {
-    font-size: 80px;
-    margin: 0;
+  #buttons > a > img, #bps > div > img {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
   }
 
   #buttons > a:first-of-type {
@@ -110,9 +113,12 @@
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 2em 2%;
     margin-bottom: 20px;
-    color: var(--alt-text-color);
+    color: var(--default-text-color);
+    box-shadow: 0 2vh 2vh 0 rgba(0, 0, 0, 0.25);
     text-align: center;
   }
 
@@ -180,6 +186,8 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 2vh;
+    box-shadow: 0 2vh 2vh 0 rgba(0, 0, 0, 0.25);
+    color: white;
   }
 
   #catchphrase > * {
@@ -199,12 +207,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: inherit;
     font-weight: bold;
     text-decoration: none;
     border-radius: 30px;
     padding: 2vh 1vh;
     transition: scale 0.25s;
+    box-shadow: 0 2vh 2vh 0 rgba(0, 0, 0, 0.25);
+    color: white;
   }
 
   #buttons > a:nth-of-type(1) {
@@ -213,16 +222,16 @@
 
   #buttons > a:nth-of-type(2) {
     background: var(--secondary-color);
-    color: var(--default-text-color);
   }
 
   #buttons > a:hover {
     scale: 1.1;
   }
 
-  #buttons > a > p, #bps > div > h2 > p {
-    font-size: 6vh;
-    margin: 0;
+  #buttons > a > img, #bps > div > img {
+    height: 6vh;
+    width: 6vh;
+    margin: 1vh;
   }
 
   #bp {
@@ -248,8 +257,11 @@
     flex-direction: column;
     padding: 3vh;
     margin-bottom: 2vh;
-    color: var(--alt-text-color);
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-text-color);
+    box-shadow: 0 2vh 2vh 0 rgba(0, 0, 0, 0.25);
   }
 
   #catchphrase > p, #bps > div > p {
