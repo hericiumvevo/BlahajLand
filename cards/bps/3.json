@@ -1,0 +1,10 @@
+{
+  "icon": "im/icons/mail.png",
+  "title": "Emails",
+  "desc": "Email accounts are hosted with excellent reputation IPs, ensuring no mail ever gets lost",
+  "code": "",
+  "link": "",
+  "pop": "var(--pop-3)",
+  "alp": "var(--alp-3)",
+  "bg": "im/bp/3.jpg"
+}

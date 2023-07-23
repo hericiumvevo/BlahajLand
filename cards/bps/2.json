@@ -1,0 +1,10 @@
+{
+  "icon": "im/icons/matrix.png",
+  "title": "Matrix",
+  "desc": "No one uses it but I've got a Matrix homeserver, quite fast",
+  "code": "",
+  "link": "",
+  "pop": "var(--pop-2)",
+  "alp": "var(--alp-2)",
+  "bg": "im/bp/2.jpg"
+}

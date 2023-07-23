@@ -1,0 +1,10 @@
+{
+  "icon": "im/icons/pro.png",
+  "title": "Pronounce",
+  "desc": "A page for showing your pronouns",
+  "code": "p.blahaj.land",
+  "link": "https://p.blahaj.land",
+  "pop": "var(--pop-3)",
+  "alp": "var(--pop-3)",
+  "bg": "im/icons/pro.png"
+}

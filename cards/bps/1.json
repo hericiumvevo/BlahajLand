@@ -1,0 +1,10 @@
+{
+  "icon": "im/icons/host.png",
+  "title": "Web hosting",
+  "desc": "Simple HTML sites can be pulled from git and hosted at <code>username.blahaj.land</code>",
+  "code": "",
+  "link": "",
+  "pop": "var(--pop-1)",
+  "alp": "var(--alp-1)",
+  "bg": "im/bp/1.jpg"
+}

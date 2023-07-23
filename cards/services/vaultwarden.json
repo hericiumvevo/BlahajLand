@@ -1,0 +1,10 @@
+{
+  "icon": "im/icons/warden.png",
+  "title": "Vaultwarden",
+  "desc": "A private Bitwarden server",
+  "code": "vault.blahaj.land",
+  "link": "https://vault.blahaj.land",
+  "pop": "var(--pop-6)",
+  "alp": "var(--pop-6)",
+  "bg": "im/icons/warden.png"
+}

@@ -10,6 +10,11 @@
     <title>blahaj.land</title>
     <link rel="stylesheet/less" type="text/css" href="css/landing.less"/>
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <?php
+
+    include_once "php/generateCard.php"
+
+    ?>
 </head>
 <body>
 <div id="navbar">
@@ -43,37 +48,7 @@
 <div id="bp">
     <h1>Why ?</h1>
     <div id="bps">
-        <div>
-            <img src="im/icons/host.png">
-            <h2>Web hosting</h2>
-            <p>Simple HTML sites can be pulled from git and hosted at <code>username.blahaj.land</code></p>
-        </div>
-        <div>
-            <img src="im/icons/matrix.png">
-            <h2>Matrix</h2>
-            <p> No one uses it but I've got a Matrix homeserver, quite fast</p>
-        </div>
-        <div>
-            <img src="im/icons/mail.png">
-            <h2>Emails</h2>
-            <p>Email accounts are hosted with excellent reputation IPs, ensuring no mail ever gets lost</p>
-        </div>
-        <div>
-            <img src="im/icons/money.png">
-            <h2>It's free!</h2>
-            <p> All accounts are free. All you gotta do is pass the vibe check >:)</p>
-        </div>
-        <div>
-            <img src="im/icons/cloud.png">
-            <h2>Cloud storage</h2>
-            <p>I am able to provide some storage <b>FOR FREE!</b> I
-                am not able to see the contents of your files or folders.</p>
-        </div>
-        <div id="uwu">
-            <img src="im/icons/fruuy.png">
-            <h2>The most important thing</h2>
-            <p>A furry runs it</p>
-        </div>
+        <?php generateCard("cards/bps")?>
     </div>
 </div>
 <footer>

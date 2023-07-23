@@ -1,0 +1,10 @@
+{
+  "icon": "im/icons/money.png",
+  "title": "It's free!",
+  "desc": "All accounts are free. All you gotta do is pass the vibe check >:)",
+  "code": "",
+  "link": "",
+  "pop": "var(--pop-4)",
+  "alp": "var(--alp-4)",
+  "bg": "im/bp/4.jpg"
+}

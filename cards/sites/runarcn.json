@@ -1,0 +1,10 @@
+{
+  "icon": "im/icons/runarcn.png",
+  "title": "Runarcn",
+  "desc": "This is a hobby project I'm running in order to (1) have a webpage because apparently all the kool kids do and (2) get a general understanding of web development, HTML, CSS and git.",
+  "code": "runarcn.blahaj.land",
+  "link": "runarcn.blahaj.land",
+  "pop": "var(--pop-3)",
+  "alp": "var(--pop-3)",
+  "bg": "im/icons/runarcn.png"
+}
