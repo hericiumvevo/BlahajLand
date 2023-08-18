@@ -1,12 +1,28 @@
-<img id="blahaj" src="im/logo-vert-light.png" alt="Blahaj land logo"
-     onclick="console.log('awa'); window.location.href = 'index.php'">
+<a href="./">
+    <img id="blahaj" src="img/logo-dark.png">
+</a>
 <div id="links">
-    <!--<a href="index.php#bp">Why ?</a>-->
-    <a href="services.php">Services</a>
-    <a href="sites.php">Sites</a>
-    <a href="donations.html">Donations</a>
-    <a href="https://discord.gg/23ScBhN7xx">Discord</a>
-    <a href="https://blahaj.land/yunohost/sso">Open</a> <!-- Thanks jamie !-->
-    <a onclick="switchThemeAlt()">🌗</a>
-    <script defer src="js/darkmode.js"></script>
+    <a href="services.html">
+        Services
+    </a>
+    <a href="sites.html">
+        Sites
+    </a>
+    <a href="donations.html">
+        Donations
+    </a>
+    <a id="discord" href="https://discord.gg/23ScBhN7xx" style="background: var(--button1);">
+        <img src="img/icons/discord.png">
+        <p>Discord</p>
+    </a>
+    <a id="open" href="https://blahaj.land/yunohost/sso" style="background: var(--button1)">
+        <img src="img/icons/open.png">
+        <p>Open</p>
+    </a>
+    <a id="theme" onclick="switchThemeAlt()" style="background: var(--button2)">
+        <img src="img/icons/theme.png">
+        <p>Theme</p>
+    </a>
 </div>
+<script defer src="js/effects.js"></script>
+<script defer src="js/darkmode.js"></script>

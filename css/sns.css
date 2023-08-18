@@ -1,0 +1,62 @@
+#services > * {
+    margin: 32px 0;
+}
+
+#services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#bps {
+    width: 90%;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+}
+
+#bps > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*start ?*/
+    align-items: center;
+    padding: 48px 64px;
+    background: var(--bg2);
+    border-radius: 32px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+#bps > a:hover {
+    filter: var(--effect);
+}
+
+#bps > a > * {
+    margin: 12px 0;
+}
+
+#bps > a > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#bps > a > div > img {
+    height: 48px;
+    margin-right: 16px;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#title > * {
+    margin: 12px 0;
+}

@@ -1,10 +1,11 @@
 <?php
 
+/*
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-/*<div onclick="window.location.href = ''" id="talisman">
+<div onclick="window.location.href = ''" id="talisman">
             <img src="">
             <h2></h2>
             <p></p>

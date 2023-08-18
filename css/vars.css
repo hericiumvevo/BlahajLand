@@ -1,70 +1,21 @@
-/* Glossary :
-
---code-color : background color for the "code" tags, used for displaying a link
---primary | secondary -color : colors used for the 2 buttons on the main page
---catch-color : color used for the welcome screen
-    --catch-alp-color : --catch-color but with a different opacity, needed for gradient
---gradient-# : color used for each block in both the "Sites" and "Services" page
---pop-# : color used for each o the bullet points situated on the main page (under the "Why ?" section)
-    --alp-# : --pop-# but with a different opacity, needed for gradient
-*/
-
 :root[data-theme="theme-light"] {
-    --bg-color: #FFFFFF;
-    --default-text-color: #202020;
-    --alt-text-color: #FFFFFF;
-    --code-color: #00000080;
-    --primary-color: #723DC1FF;
-    --secondary-color: #858ae3;
-    --catch-color: #858ae3;
-    --catch-alp-color: #858ae380;
-    --gradient-1: #DEC9E9;
-    --gradient-2: #DAC3E8;
-    --gradient-3: #D2B7E5;
-    --gradient-4: #C19EE0;
-    --gradient-5: #B185DB;
-    --gradient-6: #A06CD5;
-    --pop-1: #DEC9E9;
-    --pop-2: #DAC3E8;
-    --pop-3: #D2B7E5;
-    --pop-4: #C19EE0;
-    --pop-5: #B185DB;
-    --pop-6: #A06CD5;
-    --alp-1: #DEC9E980;
-    --alp-2: #DAC3E880;
-    --alp-3: #D2B7E580;
-    --alp-4: #C19EE080;
-    --alp-5: #B185DB80;
-    --alp-6: #A06CD580;
-    --links-color: #4939be;
+    --bg1: #FFFFFF;
+    --bg2: #cebaff;
+    --bg3: #b19bff;
+    --button1: #c8c2ff;
+    --button2: #ABE9B3;
+    --text: #1E1D2F;
+    --code:#00000020;
+    --effect: brightness(75%);
 }
 
 :root[data-theme="theme-dark"] {
-    --bg-color: #202020;
-    --default-text-color: #FFFFFF;
-    --alt-text-color: #202020;
-    --code-color: #FFFFFF80;
-    --primary-color: #723dc1;
-    --secondary-color: #4e148c;
-    --catch-color: #858ae3;
-    --catch-alp-color: #858ae380;
-    --gradient-1: #B185DB;
-    --gradient-2: #A06CD5;
-    --gradient-3: #9163CB;
-    --gradient-4: #815AC0;
-    --gradient-5: #7251B5;
-    --gradient-6: #6247AA;
-    --pop-1: #B185DB;
-    --pop-2: #A06CD5;
-    --pop-3: #9163CB;
-    --pop-4: #815AC0;
-    --pop-5: #7251B5;
-    --pop-6: #6247AA;
-    --alp-1: #B185DB80;
-    --alp-2: #A06CD580;
-    --alp-3: #9163CB80;
-    --alp-4: #815AC080;
-    --alp-5: #7251B580;
-    --alp-6: #6247AA80;
-    --links-color: #9395ff;
+    --bg1: #1E1D2F;
+    --bg2: #302D41;
+    --bg3: #575268;
+    --button1: #7287FE40;
+    --button2: #19919940;
+    --text: white;
+    --code:#FFFFFF20;
+    --effect: brightness(150%)
 }

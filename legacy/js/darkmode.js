@@ -1,5 +1,5 @@
 function switchTheme(theme) {
-    $("#blahaj").attr("src", `img/logo-${theme}.png`);
+    $("#blahaj").attr("src", `im/logo-vert-${theme}.png`);
     document.querySelector('html').dataset.theme = `theme-${theme}`;
     document.cookie = `theme=${theme}`;
 }
