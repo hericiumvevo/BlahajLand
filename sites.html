@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="navbar">
-    <script>if (screen.orientation === "landscape-primary") {
+    <script>if (screen.orientation.type === "landscape-primary") {
         $("#navbar").load("parts/navbar.html");
     }else{
         $("#navbar").load("parts/mnavbar.html");

@@ -14,13 +14,11 @@
 </head>
 <body>
 <div id="navbar">
-    <script>
-        if (screen.orientation === "landscape-primary") {
-            $("#navbar").load("parts/navbar.html");
-        } else {
-            $("#navbar").load("parts/mnavbar.html");
-        }
-    </script>
+    <script>if (screen.orientation.type === "landscape-primary") {
+        $("#navbar").load("parts/navbar.html");
+    }else{
+        $("#navbar").load("parts/mnavbar.html");
+    }</script>
 </div>
 <div id="services">
     <div id="title">
