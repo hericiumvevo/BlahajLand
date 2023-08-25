@@ -15,7 +15,11 @@
 <body>
 <div id="navbar">
     <script>
-        $("#navbar").load("parts/navbar.html");
+        if (screen.orientation === "landscape-primary") {
+            $("#navbar").load("parts/navbar.html");
+        } else {
+            $("#navbar").load("parts/mnavbar.html");
+        }
     </script>
 </div>
 <div id="services">

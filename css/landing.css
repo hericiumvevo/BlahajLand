@@ -1,91 +1,208 @@
-#main {
-    width: 100%;
-    text-align: center;
+@media only screen and (orientation: landscape) {
+    #main {
+        width: 100%;
+        text-align: center;
+    }
+
+    #main > h1 {
+        color: var(--gradient);
+    }
+
+    #main > *, #bulletpoints > * {
+        margin: 32px 0;
+    }
+
+    #main > a > img {
+        height: 256px;
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #buttons > a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 16px 24px;
+        border-radius: 999px;
+        background: var(--bg2);
+        transition: all 0.25s;
+    }
+
+    #buttons > a:hover {
+        filter: var(--effect);
+    }
+
+    #buttons > a:not(:last-of-type) {
+        margin-right: 16px;
+    }
+
+    #buttons > a > img {
+        height: 48px;
+        margin-right: 16px;
+    }
+
+    #buttons > a > p {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    #bulletpoints {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #bps {
+        width: 90%;
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+    }
+
+    #bps > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /*start ?*/
+        align-items: center;
+        padding: 48px 64px;
+        background: var(--bg2);;
+        border-radius: 32px;
+        text-align: center;
+    }
+
+    #bps > div > * {
+        margin: 16px 0;
+    }
+
+    #bps > div > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #bps > div > div > img {
+        height: 48px;
+        margin-right: 16px;
+    }
 }
 
-#main > *, #bulletpoints > * {
-    margin: 32px 0;
-}
+@media only screen and (orientation: portrait) {
+    #main {
+        width: 100%;
+        text-align: center;
+    }
 
-#main > a > img {
-    height: 256px;
-}
+    #main > *, #bulletpoints > * {
+        margin: 3vh 0;
+    }
 
-#buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
+    #main > a > img {
+        height: 20vh;
+    }
 
-#buttons > a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 16px 24px;
-    border-radius: 999px;
-    background: var(--bg2);
-    transition: all 0.25s;
-}
+    #main > a {
+        display: block;
+        margin-top: 6vh;
+        height: 20vh;
+    }
 
-#buttons > a:hover {
-    filter: var(--effect);
-}
+    #main > h1 {
+        padding: 0 5%;
+        color: var(--gradient);
+    }
 
-#buttons > a:not(:last-of-type) {
-    margin-right: 16px;
-}
+    #buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 
-#buttons > a > img {
-    height: 48px;
-    margin-right: 16px;
-}
+    #buttons > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2vh;
+        border-radius: 3vh;
+        background: var(--bg2);
+        transition: all 0.25s;
+    }
 
-#buttons > a > p {
-    font-size: 1em;
-    font-weight: bold;
-}
+    #buttons > a:active {
+        filter: var(--effect);
+    }
 
-#bulletpoints {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+    #buttons > a:not(:last-of-type) {
+        margin-right: 2vh;
+    }
 
-#bps {
-    width: 90%;
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px;
-}
+    #buttons > a > img {
+        height: 4vh;
+        /*margin-bottom: 1vh;*/
+    }
 
-#bps > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /*start ?*/
-    align-items: center;
-    padding: 48px 64px;
-    background: var(--bg2);;
-    border-radius: 32px;
-    text-align: center;
-}
+    #buttons > a > p {
+        /*font-size: 1em;*/
+        margin: 1vh 0 0 0;
+        font-weight: bold;
+    }
 
-#bps > div > * {
-    margin: 16px 0;
-}
+    #bulletpoints {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-#bps > div > div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
+    #bps {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-#bps > div > div > img {
-    height: 48px;
-    margin-right: 16px;
+    #bps > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3vh 2vh;
+        background: var(--bg2);;
+        border-radius: 3vh;
+        text-align: center;
+        width: 90%;
+    }
+
+    #bps > div:not(:last-of-type) {
+        margin-bottom: 2vh;
+    }
+
+    /*#bps > div > * {
+        margin: 16px 0;
+    }*/
+
+    #bps > div > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #bps > div > div > img {
+        height: 4vh;
+        margin-bottom: 2vh;
+    }
 }

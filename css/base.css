@@ -10,16 +10,21 @@ body {
     background: var(--bg1);;
     font-family: Inter, sans-serif;
     color: var(--text);
-    /*animation ?*/
+    animation: Hewwo ease-out 0.75s;
+    transition: all 0.25s;
 }
 
 body > div:not(#navbar) {
     margin: 64px 0;
 }
 
-@media only screen and (max-width: 768px), (orientation: portrait) {
+@media only screen and (orientation: portrait) {
     html {
         font-size: 3vw;
+    }
+
+    body > div:not(#navbar) {
+        margin: 3vh 0;
     }
 }
 
@@ -37,4 +42,34 @@ code {
     padding: 4px 8px !important;
     border-radius: 999px !important;
     background: var(--code) !important;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(30%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes mslidein {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes Hewwo {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
 }

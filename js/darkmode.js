@@ -1,7 +1,13 @@
 function switchTheme(theme) {
-    $("#blahaj").attr("src", `img/logo-${theme}.png`);
-    document.querySelector('html').dataset.theme = `theme-${theme}`;
-    document.cookie = `theme=${theme}`;
+    if (theme === "sys") {
+        const isOsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        switchTheme(isOsDark ? "dark" : "light");
+    } else {
+        $("#blahaj").attr("src", `img/logo-${theme}.png`);
+        document.querySelector('html').dataset.theme = `theme-${theme}`;
+        document.cookie = `theme=${theme}`;
+    }
+    $(".menu#m1").hide();
 }
 
 function switchThemeAlt() {
@@ -20,7 +26,6 @@ switch (document.cookie) {
         switchTheme("light");
         break;
     default:
-        const isOsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        switchTheme(isOsDark?"dark":"light");
+        switchTheme("system");
         break;
 }

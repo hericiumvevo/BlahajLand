@@ -13,75 +13,74 @@
 </head>
 <body>
 <div id="navbar">
-    <script>$("#navbar").load("parts/navbar.html")</script>
+    <script>if (screen.orientation === "landscape-primary") {
+        $("#navbar").load("parts/navbar.html");
+    }else{
+        $("#navbar").load("parts/mnavbar.html");
+    }</script>
 </div>
-<div class="title">
-    <h1>Donations</h1>
-    <p>Donations drastically help me with the upkeep of all services, and help me continue to keep
-        <code>blahaj.land</code>
-        free to use </p>
-</div>
-<div id="bps">
-    <div id="kofi">
-        <iframe id='kofiframe'
-                src='https://ko-fi.com/eryncloud/?hidefeed=true&widget=true&embed=true&preview=true'
-                style='
-                        width: 100%;
-                        height: 700px;
-                        border:none;
-                        /*padding:20px;*/
-                        /*background:#ffffff;*/
-                        border-radius: 32px;
-                        object-fit:cover'
-                title='eryncloud'>
-        </iframe>
+<div id="main">
+    <div class="title">
+        <h1>Donations</h1>
+        <p>Donations drastically help me with the upkeep of all services, and help me continue to keep
+            <code>blahaj.land</code>
+            free to use </p>
     </div>
-    <div id="tab">
-        <div class="title">
-            <h1>Thanks to our donators !</h1>
-            <p>Thanks to all of our amazing donators whose contributions help keep blahaj.land alive!</p>
+    <div id="bps">
+        <div id="kofi">
+            <iframe id='kofiframe'
+                    src='https://ko-fi.com/eryncloud/?hidefeed=true&widget=true&embed=true&preview=true'
+                    title='eryncloud'>
+            </iframe>
         </div>
-        <div id="tabs">
-            <a href="http://magnetron.blahaj.land">
-                <h3>Magnetron</h3>
-                <code>magnetron.blahaj.land</code>
-                <div>
-                    <p>6 €</p>
-                    <p>⋅</p>
-                    <p>--/--/--</p>
-                </div>
-            </a>
-            <a href="http://6vz.dev">
-                <h3>6vz</h3>
-                <code>6vz.dev</code>
-                <div>
-                    <p>1 €</p>
-                    <p>⋅</p>
-                    <p>--/--/--</p>
-                </div>
-            </a>
-            <a href="http://imalonelynerd.fr">
-                <h3>Nerd</h3>
-                <code>imalonelynerd.fr</code>
-                <div>
-                    <p>10 €</p>
-                    <p>⋅</p>
-                    <p>11/06/2023</p>
-                </div>
-            </a>
-            <a href="http://runarcn.blahaj.land">
-                <h3>Runarcn</h3>
-                <code>runarcn.blahaj.land</code>
-                <div>
-                    <p>5 €</p>
-                    <p>⋅</p>
-                    <p>27/06/2023</p>
-                </div>
-            </a>
+        <div id="tab">
+            <div class="title">
+                <h1>Thanks to our donators !</h1>
+                <p>Thanks to all of our amazing donators whose contributions help keep blahaj.land alive!</p>
+            </div>
+            <div id="tabs">
+                <a href="http://magnetron.blahaj.land">
+                    <h3>Magnetron</h3>
+                    <code>magnetron.blahaj.land</code>
+                    <div>
+                        <p>6 €</p>
+                        <p>⋅</p>
+                        <p>21/04/2023</p>
+                    </div>
+                </a>
+                <a href="http://6vz.dev">
+                    <h3>6vz</h3>
+                    <code>6vz.dev</code>
+                    <div>
+                        <p>1 €</p>
+                        <p>⋅</p>
+                        <p>--/--/--</p>
+                    </div>
+                </a>
+                <a href="http://imalonelynerd.fr">
+                    <h3>Nerd</h3>
+                    <code>imalonelynerd.fr</code>
+                    <div>
+                        <p>10 €</p>
+                        <p>⋅</p>
+                        <p>11/06/2023</p>
+                    </div>
+                </a>
+                <a href="http://runarcn.blahaj.land">
+                    <h3>Runarcn</h3>
+                    <code>runarcn.blahaj.land</code>
+                    <div>
+                        <p>5 €</p>
+                        <p>⋅</p>
+                        <p>27/06/2023</p>
+                    </div>
+                </a>
 
+            </div>
         </div>
     </div>
 </div>
+
 
 <footer>
     <script>$("footer").load("parts/footer.html")</script>

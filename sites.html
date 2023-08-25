@@ -14,9 +14,11 @@
 </head>
 <body>
 <div id="navbar">
-    <script>
+    <script>if (screen.orientation === "landscape-primary") {
         $("#navbar").load("parts/navbar.html");
-    </script>
+    }else{
+        $("#navbar").load("parts/mnavbar.html");
+    }</script>
 </div>
 <div id="services">
     <div id="title">
@@ -45,8 +47,10 @@
                 <img src="img/usrs/runarcn.png">
                 <h1>Runarcn</h1>
             </div>
-            <p title="This is a hobby project I'm running in order to (1) have a webpage because apparently all the kool kids do and (2) get a general understanding of web development, HTML, CSS and git.">This is a hobby project I'm running [...] get a general understanding of web development, HTML, CSS and git.</p>
-            <code>mail.blahaj.land</code>
+            <p title="This is a hobby project I'm running in order to (1) have a webpage because apparently all the kool kids do and (2) get a general understanding of web development, HTML, CSS and git.">
+                This is a hobby project I'm running [...] get a general understanding of web development, HTML, CSS and
+                git.</p>
+            <code>runarcn.blahaj.land</code>
         </a>
     </div>
 </div>

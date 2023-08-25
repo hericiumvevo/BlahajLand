@@ -14,12 +14,14 @@
 </head>
 <body>
 <div id="navbar">
-    <script>
+    <script>if (screen.orientation.type === "landscape-primary") {
         $("#navbar").load("parts/navbar.html");
-    </script>
+    }else{
+        $("#navbar").load("parts/mnavbar.html");
+    }</script>
 </div>
 <div id="main">
-    <a href="http://blahaj.itsjamie.dev">
+    <a href="https://blahaj.itsjamie.dev">
         <img src="img/spinning-blahaj.gif">
     </a>
     <h1>

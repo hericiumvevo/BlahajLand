@@ -1,4 +1,4 @@
-function showText() {
+/*function showText() {
     $(this).find("p").show();
     return true;
 }
@@ -14,4 +14,17 @@ function hideShowText(id) {
 
 hideShowText("discord");
 hideShowText("open");
-hideShowText("theme");
+hideShowText("theme"); */
+
+function showTheme() {
+    $(".menu#m1").show().fadeIn(250);
+}
+
+function showLinks() {
+    $(".menu#m2").show().fadeIn(250);
+}
+
+$(".menu").on("click", function () {
+    $(this).fadeOut(250).hide();
+    return true;
+});
