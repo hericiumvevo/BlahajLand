@@ -1,5 +1,5 @@
 function switchTheme(theme) {
-    if (theme === "sys") {
+    if (theme === "system") {
         const isOsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         switchTheme(isOsDark ? "dark" : "light");
     } else {
@@ -8,24 +8,22 @@ function switchTheme(theme) {
         document.cookie = `theme=${theme}`;
     }
     $(".menu#m1").hide();
+    return true;
 }
 
-function switchThemeAlt() {
+/*function switchThemeAlt() {
     if (document.cookie === "theme=dark") {
         switchTheme("light");
     } else {
         switchTheme("dark");
     }
-}
+}*/
 
 switch (document.cookie) {
-    case "theme=dark":
-        switchTheme("dark");
-        break;
     case "theme=light":
         switchTheme("light");
         break;
     default:
-        switchTheme("system");
+        switchTheme("dark");
         break;
 }
