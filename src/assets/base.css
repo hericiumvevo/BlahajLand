@@ -1,0 +1,89 @@
+:root[data-theme="theme-day"] {
+    --bg: #ffffff;
+    --widget: #e1d4ff;
+    --widget-l: #C8C2FF;
+    --icon: brightness(0) saturate(100%) invert(18%) sepia(68%) saturate(4229%) hue-rotate(173deg) brightness(92%) contrast(101%);
+    --icon-imp: brightness(0) saturate(100%) invert(8%) sepia(4%) saturate(8%) hue-rotate(323deg) brightness(97%) contrast(89%);
+    --important: #ABE9B3;
+    --text: #1E1D2F;
+    --text2: #1E1D2F;
+    --code: #00000020;
+    --effect: brightness(90%);
+}
+
+:root[data-theme="theme-dawn"] {
+    --bg: #161321;
+    --widget: #27233f;
+    --widget-l: #333863;
+    --icon: brightness(0) saturate(100%) invert(54%) sepia(89%) saturate(1041%) hue-rotate(195deg) brightness(100%) contrast(102%);
+    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
+    --important: #FF5263;
+    --text: white;
+    --text2: white;
+    --code: #FFFFFF20;
+    --effect: brightness(125%);
+}
+
+:root[data-theme="theme-night"] {
+    --bg: #1E1D2F;
+    --widget: #302D41;
+    --widget-l: #333863;
+    --icon: brightness(0) saturate(100%) invert(54%) sepia(89%) saturate(1041%) hue-rotate(195deg) brightness(100%) contrast(102%);
+    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
+    --important: #134e56;
+    --text: white;
+    --text2: white;
+    --code: #FFFFFF20;
+    --effect: brightness(125%);
+}
+
+:root[data-theme="theme-comet"] {
+    --bg: #0c2121;
+    --widget: #004346;
+    --icon: brightness(0) saturate(100%) invert(75%) sepia(64%) saturate(5811%) hue-rotate(125deg) brightness(95%) contrast(93%);
+    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
+    --important: #09bc8a;
+    --text: white;
+    --text2: white;
+    --code: #FFFFFF20;
+    --effect: brightness(125%);
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(60%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes mslidein {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes Hewwo {
+    from {
+        filter: blur(10px);
+    }
+
+    to {
+        filter: blur(0);
+    }
+}
+
+@keyframes blurbg {
+    from {
+        backdrop-filter: blur(0);
+    }
+    to {
+        backdrop-filter: blur(10px);
+    }
+}
