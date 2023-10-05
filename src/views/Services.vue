@@ -11,7 +11,7 @@ const services = ref({
       href: "https://matrix.blahaj.land/",
       img: `${nestedPath.path}icons/matrix.png`,
       title: "Cinny",
-      desc: "A little website about me",
+      desc: "A <b>Matrix</b> client",
       code: "matrix.blahaj.land"
     },
     {
@@ -46,7 +46,7 @@ const services = ref({
       href: "https://vault.blahaj.land",
       img: `${nestedPath.path}icons/warden.png`,
       title: "Vaultwarden",
-      desc: "A private Bitwarden server.",
+      desc: "A private <b>Bitwarden</b> server.",
       code: "vault.blahaj.land"
     }
   ]

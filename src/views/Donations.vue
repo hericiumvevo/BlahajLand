@@ -55,6 +55,15 @@ import SmallTitle from "@/components/SmallTitle.vue";
             <p>27/06/2023</p>
           </div>
         </a>
+        <a href="https://www.henryhiles.com">
+          <h3>QuadRadical</h3>
+          <code>henryhiles.com</code>
+          <div>
+            <p>11 €</p>
+            <p>⋅</p>
+            <p>02/09/2023</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
