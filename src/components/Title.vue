@@ -134,7 +134,7 @@ const randomT = ref(randomTitles.titles);
   }
 
   .title-cluster > div > *:not(:last-child) {
-    margin-right: 2vh;
+    margin-right: 1.5vh;
   }
 
   .title-cluster > div > a:hover {

@@ -15,11 +15,7 @@ document.querySelector('html').dataset.theme = `theme-night`;
 <template>
   <Navbar />
   <MobileNavbar/>
-
-  <Home v-if="currentPage($route) === 'HOME'"/>
-  <Services v-if="currentPage($route) === 'SERVICES'"/>
-  <Sites v-if="currentPage($route) === 'SITES'"/>
-  <Donations v-if="currentPage($route) === 'DONATIONS'"/>
+  <router-view></router-view>
   <CustomFooter/>
 </template>
 

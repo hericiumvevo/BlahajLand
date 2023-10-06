@@ -15,8 +15,6 @@
     --bg: #161321;
     --widget: #27233f;
     --widget-l: #333863;
-    --icon: brightness(0) saturate(100%) invert(54%) sepia(89%) saturate(1041%) hue-rotate(195deg) brightness(100%) contrast(102%);
-    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
     --important: #FF5263;
     --text: white;
     --text2: white;
@@ -28,8 +26,6 @@
     --bg: #1E1D2F;
     --widget: #302D41;
     --widget-l: #333863;
-    --icon: brightness(0) saturate(100%) invert(54%) sepia(89%) saturate(1041%) hue-rotate(195deg) brightness(100%) contrast(102%);
-    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
     --important: #134e56;
     --text: white;
     --text2: white;
@@ -40,8 +36,7 @@
 :root[data-theme="theme-comet"] {
     --bg: #0c2121;
     --widget: #004346;
-    --icon: brightness(0) saturate(100%) invert(75%) sepia(64%) saturate(5811%) hue-rotate(125deg) brightness(95%) contrast(93%);
-    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
+    --widget-l: #004c50;
     --important: #09bc8a;
     --text: white;
     --text2: white;

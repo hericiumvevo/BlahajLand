@@ -40,7 +40,7 @@ const cellListVar = props.cellList
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 3vh 0;
+    margin: 5vh 0;
   }
 
   .cell-list > h2 {
