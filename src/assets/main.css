@@ -10,6 +10,7 @@ body {
     color: var(--text);
     animation: Hewwo ease-out 0.75s;
     transition: all 0.25s;
+    margin: 0;
 }
 
 a {

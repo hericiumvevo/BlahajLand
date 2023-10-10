@@ -73,7 +73,11 @@ const themeMenu = ref({
 }
 
 .navbar-container {
-  padding: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

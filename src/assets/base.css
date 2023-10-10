@@ -1,9 +1,7 @@
 :root[data-theme="theme-day"] {
-    --bg: #ffffff;
-    --widget: #e1d4ff;
-    --widget-l: #C8C2FF;
-    --icon: brightness(0) saturate(100%) invert(18%) sepia(68%) saturate(4229%) hue-rotate(173deg) brightness(92%) contrast(101%);
-    --icon-imp: brightness(0) saturate(100%) invert(8%) sepia(4%) saturate(8%) hue-rotate(323deg) brightness(97%) contrast(89%);
+    --bg: #e1d4ff;
+    --widget: #c5beff;
+    --widget-l: #c9c3ff;
     --important: #ABE9B3;
     --text: #1E1D2F;
     --text2: #1E1D2F;

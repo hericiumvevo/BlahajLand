@@ -17,7 +17,7 @@ defineProps([
   .stitle {
     width: 100%;
     text-align: center;
-    margin: 64px 0;
+    margin: 192px 0 64px;
   }
 
   .stitle > * {
@@ -31,9 +31,9 @@ defineProps([
 
 @media only screen and (orientation: portrait) {
   .stitle {
-    width: 100%;
     text-align: center;
-    margin: 5vh 0;
+    margin: 15vh 0 5vh;
+    padding: 0 5vh;
   }
 
   .stitle > * {

@@ -22,11 +22,11 @@ const services = ref({
       code: "files.blahaj.land"
     },
     {
-      href: "https://p.blahaj.land",
+      href: "https://pronounce.blahaj.land",
       img: `${nestedPath.path}icons/pro.png`,
-      title: "Pronounce",
+      title: "PronounceHaj",
       desc: "A page for showing your <b>personal infos</b>.",
-      code: "p.blahaj.land"
+      code: "pronounce.blahaj.land"
     },
     {
       href: "https://mail.blahaj.land",
