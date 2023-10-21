@@ -16,24 +16,28 @@ defineProps([
 @media only screen and (orientation: landscape) {
   .stitle {
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 192px 0 64px;
+    gap: 8px;
   }
 
   .stitle > * {
     margin: 0;
   }
-
-  .stitle > *:not(:last-child) {
-    margin-bottom: 16px;
-  }
 }
 
 @media only screen and (orientation: portrait) {
   .stitle {
-    text-align: center;
     margin: 15vh 0 5vh;
     padding: 0 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
   }
 
   .stitle > * {

@@ -1,8 +1,7 @@
 <script setup>
 
 const props = defineProps([
-  "cellList",
-  "cellType"
+  "cellList"
 ])
 
 const cellListVar = props.cellList.links;
@@ -10,7 +9,7 @@ const cellListVar = props.cellList.links;
 
 <template>
   <div class="big-cell">
-    <a v-for="elem in cellListVar" :href="elem.href" @click="elem.onc">
+    <a v-for="elem in cellListVar" @click="elem.onc">
       <div>
         <img :src="elem.img" :alt="elem.img">
         <h2>{{ elem.title }}</h2>
@@ -36,10 +35,22 @@ const cellListVar = props.cellList.links;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 32px 24px;
-    background: var(--widget);;
-    border-radius: 24px;
+    padding: 24px 32px;
+    background: var(--widget);
+    border-radius: 32px;
     text-align: center;
+    transition: all 0.25s;
+    gap: 16px;
+    min-height: 160px;
+  }
+
+  .big-cell > a:hover {
+    /*border-radius: 64px;*/
+    filter: var(--effect);
+  }
+
+  .big-cell > a > * {
+    margin: 0;
   }
 
   .big-cell > a > div {
@@ -51,51 +62,62 @@ const cellListVar = props.cellList.links;
 
   .big-cell > a > div > img {
     height: 40px;
-    margin-right: 16px;
+    margin: 0 16px 0 0;
+    filter: var(--icon);
   }
 
   .big-cell > a > div > h2 {
     font-size: 1.15em;
+    margin: 0;
   }
 }
 
 @media only screen and (orientation: portrait) {
   .big-cell {
-    width: 90%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-  }
-
-  .big-cell > *:not(:last-of-type) {
-    margin-bottom: 1.5vh;
+    gap: 2vh;
   }
 
   .big-cell > a {
     display: flex;
     flex-direction: column;
-    justify-content: center; /*start ?*/
+    justify-content: center;
     align-items: center;
-    padding: 3vh;
-    background: var(--widget);;
-    border-radius: 3vh;
+    padding: 3vh 1vh;
+    background: var(--widget);
+    border-radius: 2vh;
     text-align: center;
+    transition: all 0.25s;
+    gap: 1.5vh;
+    min-height: 15vh;
   }
 
   .big-cell > a > div {
     display: flex;
     flex-direction: column;
-    justify-content: center; /*start ?*/
+    justify-content: center;
     align-items: center;
+  }
+
+  .big-cell > a > * {
+    margin: 0;
   }
 
   .big-cell > a > div > img {
     height: 4vh;
+    filter: var(--icon);
   }
 
   .big-cell > a > div > h2 {
     margin: 1vh 0 0 0;
+  }
+
+  .big-cell > a:active {
+    filter: var(--effect);
   }
 }
 </style>

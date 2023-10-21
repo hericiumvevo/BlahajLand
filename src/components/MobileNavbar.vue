@@ -1,9 +1,16 @@
 <script setup>
-import MenuButton from "@/components/MenuButton.vue";
 import HiddenMenu from "@/components/HiddenMenu.vue";
 import {ref} from "vue";
 import {switchTheme} from "@/assets/js/darkMode";
-import nestedPath from "@/assets/json/nestedPath.json"
+import nestedPath from "@/assets/json/nestedPath.json";
+import NavbarButton from "@/components/NavbarButton.vue";
+import {useRouter} from "vue-router";
+import {changeLoc} from "@/assets/js/menuUtils";
+
+const isThemeMenuShown = ref(false);
+const isLinkMenuShown = ref(false);
+
+const unusualRouter = useRouter();
 
 
 const themeMenu = ref({
@@ -28,60 +35,78 @@ const themeMenu = ref({
             switchTheme('system')
           },
           imgLink: `${nestedPath.path}icons/theme/system.png`,
-          shownTitle: "System"
-        }
+          shownTitle: "System",
+        },
       ]
 })
-
-const routeMenu = ref({
+const menu = ref({
   menuButtons:
       [
         {
-          routerLink: `${nestedPath.path}`,
-          hrefLink: "route",
-          imgLink: ``,
+          onClick: function () {
+            unusualRouter.push(nestedPath.path)
+          },
           shownTitle: "Home",
         },
         {
-          routerLink: `${nestedPath.path}services`,
-          hrefLink: "route",
-          imgLink: ``,
+          onClick: function () {
+            unusualRouter.push(nestedPath.path + 'services')
+          },
           shownTitle: "Services",
         },
         {
-          routerLink: `${nestedPath.path}sites`,
-          hrefLink: "route",
-          imgLink: ``,
+          onClick: function () {
+            unusualRouter.push(nestedPath.path + 'sites')
+          },
           shownTitle: "Sites",
         },
         {
-          routerLink: `${nestedPath.path}donations`,
-          hrefLink: "route",
-          imgLink: ``,
+          onClick: function () {
+            unusualRouter.push(nestedPath.path + 'donations')
+          },
           shownTitle: "Donations",
         },
         {
-          hrefLink: "https://discord.gg/23ScBhN7xx",
-          imgLink: `${nestedPath.path}icons/discord.png`,
+          onClick: function () {
+            alert("Coming soon !")
+          },
+          shownTitle: "Rules & TOS",
+        },
+        {
+          onClick: function () {
+            changeLoc("https://discord.com/invite/23ScBhN7xx")
+          },
+          imgLink: nestedPath.path + 'icons/discord.png',
           shownTitle: "Join",
         },
         {
-          hrefLink: "https://blahaj.land/yunohost/sso",
-          imgLink: `${nestedPath.path}icons/open.png`,
+          onClick: function () {
+            changeLoc("https://blahaj.land/yunohost/");
+          },
+          imgLink: nestedPath.path + 'icons/open.png',
           shownTitle: "Open",
-        }
+        },
       ]
 })
-
 </script>
 
 <template>
+  <HiddenMenu :menuOptions="menu"
+              v-if="isLinkMenuShown"
+              @update:menuHidden="isLinkMenuShown = false"/>
+  <HiddenMenu :menuOptions="themeMenu"
+              v-if="isThemeMenuShown"
+              @update:menuHidden="isThemeMenuShown = false"/>
+
   <div class="mobile-navbar-container">
-    <HiddenMenu :menuOptions="routeMenu" menuId="links" id="links"/>
-    <HiddenMenu :menuOptions="themeMenu" menuId="mtheme" id="mtheme"/>
-    <MenuButton buttonId="links" :imgLink="nestedPath.path + `icons/web.png`" shownTitle=""/>
-    <img src="/images/logo-night.png" id="mblahaj">
-    <MenuButton buttonId="mtheme" :imgLink="nestedPath.path + `icons/theme.png`" shownTitle="" :isImportant="true"/>
+    <NavbarButton @update:buttonClicked="isLinkMenuShown = true"
+                  :imgLink="nestedPath.path + 'icons/list.png'"
+                  is-important="true"
+                  shownTitle=""/>
+    <img id="mblahaj" :src="nestedPath.path + 'images/logo-night.png'" @click="$router.push(nestedPath.path)">
+    <NavbarButton @update:buttonClicked="isThemeMenuShown = true"
+                  :imgLink="nestedPath.path + 'icons/theme.png'"
+                  shownTitle="" :isImportant2="true"/>
   </div>
 </template>
 
@@ -94,15 +119,16 @@ const routeMenu = ref({
 }
 
 .mobile-navbar-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 2vh;
+  padding: 3vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  animation: HewwoBar ease-out 0.75s;
 }
 
 .mobile-navbar-container > img {

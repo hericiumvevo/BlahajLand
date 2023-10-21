@@ -1,0 +1,20 @@
+{
+  "name": "Blahaj Land",
+  "id": "blahajland",
+  "packaging_format": 1,
+  "description": {
+    "en": "The official BlahajLand theme.",
+    "fr": "Le thème officiel du site BlahajLand."
+  },
+  "version": "1.0",
+  "url": "",
+  "license": "AGPL-3.0",
+  "maintainer": {
+    "name": "Nerd",
+    "email": "imalonelynerd@gmail.com"
+  },
+  "requirements": {
+    "yunohost": ">= 3.5.2",
+    "ssowat": ">= 3.5.2"
+  }
+}

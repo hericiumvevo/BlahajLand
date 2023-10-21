@@ -82,7 +82,7 @@ import SmallTitle from "@/components/SmallTitle.vue";
 
   .donations > * {
     background: var(--widget);;
-    border-radius: 24px;
+    border-radius: 32px;
   }
 
   .ktitle > * {
@@ -98,18 +98,17 @@ import SmallTitle from "@/components/SmallTitle.vue";
     width: 100%;
     height: 700px;
     border: none;
-    border-radius: 20px;
+    border-radius: 12px;
     object-fit: cover;
   }
 
   #tab {
     grid-column-start: 2;
     grid-column-end: 4;
-    padding: 24px 32px;
-  }
-
-  #tab > * {
-    margin: 32px 0;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   #tabs {
@@ -127,16 +126,17 @@ import SmallTitle from "@/components/SmallTitle.vue";
     justify-content: center;
     background: var(--bg);;
     border-radius: 32px;
-    padding: 16px;
+    padding: 24px 16px;
     transition: all 0.25s;
+    gap: 8px;
+  }
+
+  #tabs > a > * {
+    margin: 0;
   }
 
   #tabs > a:hover {
     filter: var(--effect);
-  }
-
-  #tabs > a > * {
-    margin: 8px;
   }
 
   #tabs > a > div {
@@ -144,14 +144,11 @@ import SmallTitle from "@/components/SmallTitle.vue";
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 12px;
   }
 
   #tabs p {
     margin: 0;
-  }
-
-  #tabs > a > div > p:not(:last-of-type) {
-    margin: 0 12px 0 0;
   }
 }
 
@@ -163,10 +160,7 @@ import SmallTitle from "@/components/SmallTitle.vue";
     align-items: center;
     width: 90%;
     margin: 3vh auto;
-  }
-
-  .donations > *:not(:last-of-type) {
-    margin-bottom: 2vh;
+    gap: 2vh;
   }
 
   .donations > * {
@@ -198,14 +192,11 @@ import SmallTitle from "@/components/SmallTitle.vue";
 
   #tab {
     padding: 3vh 2vh;
+    gap: 3vh;
   }
 
   #tab > * {
     margin: 0;
-  }
-
-  #tab > *:not(:last-child) {
-    margin-bottom: 3vh;
   }
 
   #tabs {
@@ -214,6 +205,7 @@ import SmallTitle from "@/components/SmallTitle.vue";
     justify-content: center;
     align-items: center;
     overflow: scroll;
+    gap: 1vh;
   }
 
   #tabs > a {
@@ -228,9 +220,6 @@ import SmallTitle from "@/components/SmallTitle.vue";
     width: 90%;
   }
 
-  #tabs > a:not(:last-of-type) {
-    margin-bottom: 1vh;
-  }
 
   #tabs > a:active {
     filter: var(--effect);
@@ -245,14 +234,11 @@ import SmallTitle from "@/components/SmallTitle.vue";
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 0.5vh;
   }
 
   #tabs p {
     margin: 0;
-  }
-
-  #tabs > a > div > p:not(:last-of-type) {
-    margin: 0 0.5vh 0 0;
   }
 }
 </style>

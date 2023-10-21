@@ -2,21 +2,15 @@
 defineProps([
   "onClick",
   "imgLink",
-  "shownTitle",
-  "hrefLink",
-  "routerLink"
+  "shownTitle"
 ])
 </script>
 
 <template>
-  <a @click="onClick" :href="hrefLink" v-if="hrefLink !== 'route'">
+  <a @click="onClick">
     <img :src="imgLink" :alt="imgLink">
     <p>{{ shownTitle }}</p>
   </a>
-  <router-link :to="routerLink" v-if="hrefLink === 'route'">
-    <img :src="imgLink" :alt="imgLink">
-    <p>{{ shownTitle }}</p>
-  </router-link>
 </template>
 
 <style scoped>
@@ -27,7 +21,7 @@ defineProps([
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-radius: 999px;
+    border-radius: 32px;
     padding: 16px 32px;
     background: none;
     animation: all 0.25s;
@@ -42,6 +36,7 @@ defineProps([
   a > img {
     height: 32px;
     margin-right: 16px;
+    filter: var(--icon);
   }
 
   a > p {
@@ -57,7 +52,7 @@ defineProps([
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-radius: 999px;
+    border-radius: 6vh;
     padding: 2vh 3vh;
     background: none;
     animation: all 0.25s;
@@ -72,6 +67,7 @@ defineProps([
   a > img {
     height: 2vh;
     margin-right: 1vh;
+    filter: var(--icon);
   }
 
   a > p {

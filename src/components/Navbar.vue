@@ -1,15 +1,16 @@
 <script setup>
-import LinkButton from "@/components/LinkButton.vue"
-import MenuButton from "@/components/MenuButton.vue";
+import NavbarButton from "@/components/NavbarButton.vue"
+import HiddenMenu from "@/components/HiddenMenu.vue"
 import {ref} from "vue";
 import {switchTheme} from "@/assets/js/darkMode"
-import RouterButton from "@/components/RouterButton.vue";
 import nestedPath from "@/assets/json/nestedPath.json"
-import HiddenMenu from "@/components/HiddenMenu.vue";
+import {changeLoc, unusualAlert} from "@/assets/js/menuUtils";
 
 defineProps([
   "alignRight"
 ])
+
+const isThemeMenuShown = ref(false);
 
 const themeMenu = ref({
   menuButtons:
@@ -33,7 +34,7 @@ const themeMenu = ref({
             switchTheme('system')
           },
           imgLink: `${nestedPath.path}icons/theme/system.png`,
-          shownTitle: "System"
+          shownTitle: "System",
         }
       ]
 })
@@ -42,27 +43,39 @@ const themeMenu = ref({
 
 <template>
   <div class="navbar-container" :class="{ 'align-right' : alignRight }">
-    <router-link :to="nestedPath">
-      <img id="blahaj" src="/images/logo-night.png">
-    </router-link>
+    <img id="blahaj" :src="nestedPath.path + 'images/logo-night.png'" @click="$router.push(nestedPath.path)">
     <div class="navbar">
-      <RouterButton :hrefLink="nestedPath.path" :imgLink="nestedPath.path + 'icons/private.png'"
+      <NavbarButton @update:buttonClicked="$router.push(nestedPath.path)"
+                    imgLink=""
                     shownTitle="Home"/>
-      <RouterButton :hrefLink="nestedPath.path + 'services'" :imgLink="nestedPath.path + 'icons/private.png'"
+      <NavbarButton @update:buttonClicked="$router.push(nestedPath.path + 'services')"
+                    imgLink=""
                     shownTitle="Services"/>
-      <RouterButton :hrefLink="nestedPath.path + 'sites'" :imgLink="nestedPath.path + 'icons/private.png'"
+      <NavbarButton @update:buttonClicked="$router.push(nestedPath.path + 'sites')"
+                    imgLink=""
                     shownTitle="Sites"/>
-      <RouterButton :hrefLink="nestedPath.path + 'donations'" :imgLink="nestedPath.path + 'icons/private.png'"
+      <NavbarButton @update:buttonClicked="$router.push(nestedPath.path + 'donations')"
+                    imgLink=""
                     shownTitle="Donations"/>
-      <LinkButton href-link="https://discord.gg/23ScBhN7xx" :img-link="nestedPath.path + 'icons/discord.png'"
-                  shown-title="Join"/>
-      <LinkButton href-link="https://blahaj.land/yunohost/sso" :img-link="nestedPath.path + 'icons/open.png'"
-                  shown-title="Open"/>
-      <MenuButton buttonId="theme" :imgLink="nestedPath.path + 'icons/theme.png'" shownTitle="Theme"
-                  :isImportant="true"/>
+      <NavbarButton @update:buttonClicked="unusualAlert('Coming soon !')"
+                    imgLink=""
+                    shownTitle="Rules & TOS"/>
+      <NavbarButton @update:buttonClicked="changeLoc()"
+                    :imgLink="nestedPath.path + 'icons/discord.png'"
+                    shownTitle="Join"
+                    is-important="true"/>
+      <NavbarButton @update:buttonClicked="changeLoc()"
+                    :imgLink="nestedPath.path + 'icons/open.png'"
+                    shownTitle="Open"
+                    is-important="true"/>
+      <NavbarButton @update:buttonClicked="isThemeMenuShown = true"
+                    :imgLink="nestedPath.path + 'icons/theme.png'"
+                    shownTitle="Theme"
+                    isImportant2="true"/>
     </div>
-    <HiddenMenu :menuOptions="themeMenu" menuId="theme" id="theme"/>
   </div>
+  <HiddenMenu :menuOptions="themeMenu" v-if="isThemeMenuShown === true" @update:menuHidden="isThemeMenuShown = false"/>
+
 </template>
 
 <style scoped>
@@ -84,23 +97,26 @@ const themeMenu = ref({
   align-items: center;
 }
 
-.navbar-container > a > img {
+.navbar-container > img {
   height: 32px;
+  cursor: pointer;
+  transition: all 0.25s;
 }
 
-.navbar {
+.navbar-container > img:hover {
+  filter: var(--effect);
+}
+
+.navbar, .navbar > div {
   display: flex;
   flex-direction: row;
   align-items: center;
-  animation: Hewwo 0.25s;
+  animation: HewwoBar ease-out 0.33s;
+  gap: 8px;
 }
 
 .align-right {
   justify-content: end;
-}
-
-.navbar > *:not(:last-child) {
-  margin-right: 8px;
 }
 
 </style>

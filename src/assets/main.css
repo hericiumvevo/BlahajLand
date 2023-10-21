@@ -40,3 +40,9 @@ a:hover {
         font-size: 3vw;
     }
 }
+
+@media only screen and (orientation: landscape) {
+    html {
+        font-size: 0.9em;
+    }
+}

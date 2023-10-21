@@ -2,6 +2,9 @@
 
 import randomTitles from "@/assets/json/randomTitles.json"
 import {ref} from "vue";
+import WideButton from "@/components/WideButton.vue";
+import nestedPath from "@/assets/json/nestedPath.json"
+import {changeLoc} from "@/assets/js/menuUtils";
 
 const randomT = ref(randomTitles.titles);
 
@@ -13,15 +16,16 @@ const randomT = ref(randomTitles.titles);
       <img src="/images/spinning-blahaj.gif">
     </a>
     <h1>{{ randomT[Math.floor(Math.random() * randomT.length)] }}</h1>
+    <p>Welcome to <b>Blahaj Land</b> ! Hope you enjoy your stay.</p>
     <div>
-      <a href="https://discord.gg/23ScBhN7xx">
-        <img src="/icons/bigjoin.png">
-        <p>Pass the vibe check >:3</p>
-      </a>
-      <a href="https://blahaj.land/yunohost/sso">
-        <img src="/icons/bigopen.png">
-        <p>Enter the Blahaj Land</p>
-      </a>
+      <WideButton
+          :img-link="`${nestedPath.path}icons/bigjoin.png`"
+          shown-title="Pass the vibe check >:3"
+          @update:buttonClicked="changeLoc('https://discord.gg/23ScBhN7xx')"/>
+      <WideButton
+          :img-link="`${nestedPath.path}icons/bigopen.png`"
+          shown-title="Enter the Blahaj Land"
+          @update:buttonClicked="changeLoc('https://blahaj.land/yunohost/sso')"/>
     </div>
   </div>
 </template>
@@ -37,10 +41,16 @@ const randomT = ref(randomTitles.titles);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 32px;
   }
 
   .title-cluster > a > img {
     height: 224px;
+    margin-bottom: -32px;
+  }
+
+  .title-cluster > p {
+   margin-top: -16px;
   }
 
   .title-cluster > div {
@@ -48,59 +58,24 @@ const randomT = ref(randomTitles.titles);
     flex-direction: row;
     align-items: center;
     justify-content: center;
-  }
-
-  .title-cluster > div > a {
-    margin: 0;
-    padding: 24px 32px;
-    border-radius: 999px;
-    font-size: 1em;
-    font-weight: bold;
-    background: var(--widget);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.25s;
-  }
-
-  .title-cluster > div > *:not(:last-child) {
-    margin-right: 16px;
-  }
-
-  .title-cluster > div > a:hover {
-    filter: var(--effect);
-  }
-
-  .title-cluster > div > a > img {
-    height: 1.75em;
-  }
-
-  .title-cluster > div > a > p {
-    padding: 0;
-    transition: all 0.25s;
-    margin: 0 0 0 12px;
+    gap: 16px;
   }
 
   .title-cluster > * {
     margin: 0;
-  }
-
-  .title-cluster > *:not(:last-child):not(a) {
-    margin-bottom: 32px;
   }
 }
 
 @media only screen and (orientation: portrait) {
   .title-cluster {
     width: 100vw;
-    height: 100vh;
     text-align: center;
-    margin: 3vh 0;
+    margin: 15vh 0 3vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 4vh;
   }
 
   .title-cluster > * {
@@ -108,8 +83,8 @@ const randomT = ref(randomTitles.titles);
     width: 80%;
   }
 
-  .title-cluster > *:not(:last-child):not(a) {
-    margin-bottom: 4vh;
+  .title-cluster > p {
+    margin-top: -3vh;
   }
 
   .title-cluster > a > img {
@@ -118,10 +93,11 @@ const randomT = ref(randomTitles.titles);
 
   .title-cluster > div {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
     justify-content: center;
-    width: 70%;
+    width: 85%;
+    gap: 2vh;
   }
 
   .title-cluster > div > a {
@@ -138,10 +114,6 @@ const randomT = ref(randomTitles.titles);
     justify-content: center;
     cursor: pointer;
     transition: all 0.25s;
-  }
-
-  .title-cluster > div > *:not(:last-child) {
-    margin-bottom: 2vh;
   }
 
   .title-cluster > div > a:hover {
