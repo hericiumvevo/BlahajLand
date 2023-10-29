@@ -15,7 +15,7 @@ import SmallTitle from "@/components/SmallTitle.vue";
     </div>
     <div id="tab">
       <div class="ktitle">
-        <h1>Thanks to our donators !</h1>
+        <h1>Thanks to our donators!</h1>
         <p>Thanks to all of our amazing donators whose contributions help keep blahaj.land alive!</p>
       </div>
       <div id="tabs">

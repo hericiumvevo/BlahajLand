@@ -16,7 +16,7 @@ const randomT = ref(randomTitles.titles);
       <img src="/images/spinning-blahaj.gif">
     </a>
     <h1>{{ randomT[Math.floor(Math.random() * randomT.length)] }}</h1>
-    <p>Welcome to <b>Blahaj Land</b> ! Hope you enjoy your stay.</p>
+    <p>Welcome to <b>Blahaj Land</b>! Hope you enjoy your stay.</p>
     <div>
       <WideButton
           :img-link="`${nestedPath.path}icons/bigjoin.png`"

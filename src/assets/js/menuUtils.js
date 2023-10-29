@@ -13,7 +13,7 @@ export function mailTo(mail) {
 }
 
 export function copyText(text) {
-    navigator.clipboard.writeText(text).then(r => alert(`"${text}" copied successfully !`));
+    navigator.clipboard.writeText(text).then(r => alert(`"${text}" copied successfully!`));
     return true;
 }
 

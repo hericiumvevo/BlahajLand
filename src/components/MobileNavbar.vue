@@ -68,7 +68,7 @@ const menu = ref({
         },
         {
           onClick: function () {
-            alert("Coming soon !")
+            alert("Coming soon!")
           },
           shownTitle: "Rules & TOS",
         },

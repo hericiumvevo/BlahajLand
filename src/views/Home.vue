@@ -26,7 +26,7 @@ const why = ref({
     {
       img: `${nestedPath.path}icons/matrix.png`,
       title: "Matrix",
-      desc: "No one uses it but I've got a <b>Matrix homeserver</b>, quite fast",
+      desc: "<b>Matrix homeserver</b>, quite fast",
       code: ""
     },
     {
@@ -37,7 +37,7 @@ const why = ref({
     },
     {
       img: `${nestedPath.path}icons/money.png`,
-      title: "It's free !",
+      title: "It's free!",
       desc: "All accounts are <b>free</b>. All you gotta do is <b>pass the vibe check >:)</b>",
       code: ""
     },
@@ -65,7 +65,7 @@ const why = ref({
 
 <template>
   <Title/>
-  <CellCluster shown-title="Why ?" list-type="BigList" :cell-list="why"/>
+  <CellCluster shown-title="Why?" list-type="BigList" :cell-list="why"/>
 </template>
 
 <style scoped>
